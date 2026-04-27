@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نجوم التعلم — الموارد التعليمية للسلك الابتدائي بالمغرب</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green:#1a7f5a;--green-l:#23a876;--green-d:#0f5a3e;
+  --gold:#f0a500;--gold-l:#f8c741;--sky:#1565c0;--purple:#7b1fa2;
+  --bg:#f4f8f6;--text:#1a2e25;--text-l:#4a6356;--border:#d0e8dd;--radius:18px;
+  --sh:0 6px 28px rgba(26,127,90,0.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+.topbar{background:linear-gradient(90deg,var(--gold),var(--gold-l));color:#1a2e25;text-align:center;padding:9px;font-size:13px;font-weight:700;}
+header{background:linear-gradient(135deg,var(--green-d),var(--green) 55%,var(--green-l));color:#fff;position:relative;overflow:hidden;}
+.hdr-inner{display:flex;align-items:center;justify-content:center;gap:20px;padding:30px 40px;position:relative;z-index:2;flex-wrap:wrap;text-align:center;}
+.logo{width:86px;height:86px;background:linear-gradient(135deg,var(--gold),var(--gold-l));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:0 6px 28px rgba(0,0,0,.25),0 0 0 5px rgba(255,255,255,.15);animation:float 3s ease-in-out infinite;flex-shrink:0;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.site-title{font-family:'Amiri',serif;font-size:44px;font-weight:700;}
+.site-sub{font-size:15px;opacity:.88;margin-top:5px;}
+.badges{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap;}
+.badge{background:rgba(240,165,0,.22);border:1px solid rgba(240,165,0,.45);color:var(--gold-l);padding:5px 13px;border-radius:20px;font-size:12px;font-weight:700;}
+.statsbar{background:linear-gradient(90deg,var(--green-d),var(--sky));display:flex;justify-content:center;flex-wrap:wrap;}
+.stat{padding:15px 40px;text-align:center;border-left:1px solid rgba(255,255,255,.13);color:#fff;}
+.stat:last-child{border-left:none;}
+.stat b{display:block;font-size:24px;color:var(--gold-l);}
+.stat span{font-size:11px;opacity:.8;}
+nav{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+.nav-inner{display:flex;overflow-x:auto;padding:0 20px;}
+.nav-inner a{display:flex;align-items:center;gap:6px;padding:13px 16px;text-decoration:none;color:var(--text-l);font-size:14px;font-weight:700;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;}
+.nav-inner a:hover,.nav-inner a.active{color:var(--green);border-bottom-color:var(--green);background:#f0faf5;}
+main{max-width:1280px;margin:0 auto;padding:36px 28px;}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
+.sec-line{flex:1;height:2px;background:linear-gradient(90deg,var(--green),transparent);}
+.sec-line.r{background:linear-gradient(270deg,var(--green),transparent);}
+.sec-title{font-family:'Amiri',serif;font-size:26px;color:var(--green-d);white-space:nowrap;}
+/* SEARCH */
+.srch-wrap{background:linear-gradient(135deg,var(--green-d),var(--sky));border-radius:20px;padding:40px 48px;text-align:center;margin-bottom:46px;position:relative;overflow:hidden;}
+.srch-wrap h2{font-family:'Amiri',serif;font-size:30px;color:#fff;margin-bottom:5px;}
+.srch-wrap p{color:rgba(255,255,255,.8);font-size:14px;margin-bottom:22px;}
+.sbox{display:flex;gap:10px;max-width:560px;margin:0 auto;}
+.sbox input{flex:1;padding:14px 20px;border-radius:12px;border:none;font-family:'Tajawal',sans-serif;font-size:15px;outline:none;text-align:right;}
+.sbox button{padding:14px 24px;background:var(--gold);color:#1a2e25;border:none;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:800;cursor:pointer;}
+.sbox button:hover{background:var(--gold-l);}
+/* LEVELS */
+.lvls-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:13px;margin-bottom:46px;}
+.lq{border-radius:14px;padding:18px 10px;text-align:center;cursor:pointer;transition:all .22s;color:#fff;}
+.lq:hover{transform:translateY(-4px);}
+.lq.lv1{background:linear-gradient(135deg,#e53935,#c62828);}
+.lq.lv2{background:linear-gradient(135deg,#e65100,#bf360c);}
+.lq.lv3{background:linear-gradient(135deg,#f9a825,#f57f17);}
+.lq.lv4{background:linear-gradient(135deg,#2e7d32,#1b5e20);}
+.lq.lv5{background:linear-gradient(135deg,#1565c0,#0d47a1);}
+.lq.lv6{background:linear-gradient(135deg,#6a1b9a,#4a148c);}
+.lq-em{font-size:30px;display:block;margin-bottom:7px;}
+.lq-nm{font-size:12px;font-weight:800;}
+.lq-ct{font-size:11px;opacity:.85;margin-top:2px;}
+/* SUBJECTS */
+.subj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:46px;}
+.sq{background:#fff;border-radius:13px;padding:20px 14px;text-align:center;box-shadow:var(--sh);cursor:pointer;transition:all .2s;border-top:4px solid;}
+.sq:hover{transform:translateY(-3px);}
+.sq-ic{font-size:36px;display:block;margin-bottom:9px;}
+.sq-nm{font-size:14px;font-weight:800;}
+.sq-ct{font-size:12px;color:var(--text-l);margin-top:3px;}
+.bc-math{border-color:#e53935;}.bc-arabic{border-color:#2e7d32;}.bc-french{border-color:#1565c0;}
+.bc-science{border-color:#f57f17;}.bc-social{border-color:#6a1b9a;}.bc-islamic{border-color:#00695c;}
+.bc-sport{border-color:#e65100;}.bc-art{border-color:#ad1457;}
+/* FILTERS */
+.fbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px;align-items:center;}
+.flbl{font-weight:700;color:var(--green-d);font-size:14px;}
+.ftag{padding:7px 15px;border-radius:18px;border:2px solid var(--border);background:#fff;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;color:var(--text-l);}
+.ftag:hover,.ftag.active{background:var(--green);color:#fff;border-color:var(--green);}
+.rcount{font-size:13px;color:var(--text-l);margin-bottom:14px;font-weight:600;}
+/* GRID */
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px;}
+.ccard{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--border);transition:all .22s;cursor:pointer;}
+.ccard:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(26,127,90,.16);border-color:var(--green-l);}
+.ccard-top{padding:16px 18px 12px;display:flex;align-items:flex-start;gap:13px;}
+.cc-ic{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.ic-math{background:#fdecea;}.ic-arabic{background:#e8f5e9;}.ic-french{background:#e3f2fd;}
+.ic-science{background:#fff8e1;}.ic-social{background:#f3e5f5;}.ic-islamic{background:#e0f2f1;}
+.ic-sport{background:#fff3e0;}.ic-art{background:#fce4ec;}
+.cc-info{flex:1;}
+.cc-title{font-size:14px;font-weight:800;color:var(--text);line-height:1.4;margin-bottom:5px;}
+.cc-meta{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;}
+.ctag{padding:3px 9px;border-radius:9px;font-size:10px;font-weight:700;color:#fff;}
+.tag-math{background:#e53935;}.tag-arabic{background:#2e7d32;}.tag-french{background:#1565c0;}
+.tag-science{background:#f57f17;}.tag-social{background:#6a1b9a;}.tag-islamic{background:#00695c;}
+.tag-sport{background:#e65100;}.tag-art{background:#ad1457;}
+.tag-lvl{background:var(--text-l);}
+.tag-درس{background:var(--green);}.tag-تمرين{background:var(--sky);}.tag-فرض{background:#c62828;}.tag-ملخص{background:var(--purple);}
+.cc-desc{font-size:11px;color:var(--text-l);line-height:1.6;}
+.ccard-bot{padding:10px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:#fafafa;}
+.cc-unit{font-size:11px;color:var(--text-l);}
+.btns-row{display:flex;gap:5px;}
+.btn-v{padding:6px 13px;background:var(--sky);color:#fff;border:none;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s;}
+.btn-v:hover{background:#0d47a1;}
+.btn-d{padding:6px 13px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s;}
+.btn-d:hover{background:var(--green-d);}
+/* PAGINATION */
+.pag{display:flex;gap:7px;justify-content:center;margin-bottom:44px;flex-wrap:wrap;}
+.pbtn{width:38px;height:38px;border-radius:9px;border:2px solid var(--border);background:#fff;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.pbtn:hover,.pbtn.active{background:var(--green);color:#fff;border-color:var(--green);}
+/* EMPTY */
+.empty{grid-column:1/-1;text-align:center;padding:55px 20px;color:var(--text-l);}
+.empty-ic{font-size:60px;display:block;margin-bottom:14px;}
+/* MODAL */
+.moverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:999;align-items:center;justify-content:center;}
+.moverlay.open{display:flex;}
+.modal{background:#fff;border-radius:20px;padding:32px 36px;max-width:540px;width:92%;position:relative;animation:mIn .22s ease;max-height:90vh;overflow-y:auto;}
+@keyframes mIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.mcls{position:absolute;top:12px;left:12px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-l);}
+.m-ic{font-size:50px;text-align:center;display:block;margin-bottom:12px;}
+.m-title{font-family:'Amiri',serif;font-size:24px;color:var(--green-d);text-align:center;margin-bottom:8px;}
+.m-tags{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
+.m-body{font-size:13px;color:var(--text);line-height:2;background:#f4f8f6;border-radius:11px;padding:16px 20px;margin-bottom:18px;}
+.m-body h4{color:var(--green-d);font-size:14px;margin-bottom:7px;margin-top:11px;}
+.m-body h4:first-child{margin-top:0;}
+.m-body ul{padding-right:18px;}
+.m-body li{margin-bottom:5px;}
+.m-body p{line-height:2.2;}
+.mbtns{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;}
+.mbtn{padding:11px 26px;border-radius:11px;border:none;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;}
+.mbtn-g{background:var(--green);color:#fff;}.mbtn-g:hover{background:var(--green-d);}
+.mbtn-b{background:var(--sky);color:#fff;}.mbtn-b:hover{background:#0d47a1;}
+.mbtn-o{background:none;border:2px solid var(--border);color:var(--text-l);}.mbtn-o:hover{border-color:var(--green);color:var(--green);}
+/* FOOTER */
+footer{background:var(--green-d);color:#fff;padding:40px 40px 18px;}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;max-width:1280px;margin:0 auto 32px;}
+.fb-t{font-family:'Amiri',serif;font-size:22px;color:var(--gold-l);display:block;margin-bottom:9px;}
+.fb-d{font-size:12px;opacity:.72;line-height:1.8;margin-bottom:13px;}
+.socs{display:flex;gap:9px;}
+.soc{width:34px;height:34px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:background .2s;}
+.soc:hover{background:rgba(255,255,255,.2);}
+.fc h4{font-size:13px;font-weight:800;color:var(--gold-l);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.13);}
+.fc ul{list-style:none;}
+.fc ul li{margin-bottom:8px;}
+.fc ul li a{color:rgba(255,255,255,.7);text-decoration:none;font-size:12px;transition:color .2s;}
+.fc ul li a:hover{color:#fff;}
+.fbot{max-width:1280px;margin:0 auto;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;display:flex;justify-content:space-between;font-size:12px;opacity:.6;flex-wrap:wrap;gap:7px;}
+.fab{position:fixed;bottom:24px;left:24px;width:52px;height:52px;background:linear-gradient(135deg,var(--green),var(--green-l));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 5px 18px rgba(26,127,90,.4);cursor:pointer;z-index:200;border:none;color:#fff;transition:transform .2s;}
+.fab:hover{transform:scale(1.1);}
+@media(max-width:1000px){.cgrid{grid-template-columns:repeat(2,1fr);}.lvls-grid{grid-template-columns:repeat(3,1fr);}.subj-grid{grid-template-columns:repeat(2,1fr);}.fg{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.cgrid{grid-template-columns:1fr;}.lvls-grid{grid-template-columns:repeat(2,1fr);}.statsbar{flex-wrap:wrap;}.stat{padding:11px 16px;}.site-title{font-size:30px;}.srch-wrap{padding:28px 18px;}.sbox{flex-direction:column;}.fg{grid-template-columns:1fr;} main{padding:28px 14px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">🎉 نجوم التعلم — موارد تعليمية مجانية لجميع مستويات السلك الابتدائي بالمغرب</div>
+
+<header>
+  <div class="hdr-inner">
+    <div class="logo">⭐</div>
+    <div>
+      <div class="site-title">نجوم التعلم</div>
+      <div class="site-sub">المنصة التعليمية الشاملة للسلك الابتدائي — المغرب</div>
+      <div class="badges">
+        <span class="badge">📚 مجاني 100%</span>
+        <span class="badge">🇲🇦 وفق المناهج الرسمية</span>
+        <span class="badge">✅ 6 مستويات — 8 مواد</span>
+        <span class="badge">📥 تحميل مباشر</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="statsbar">
+  <div class="stat"><b id="tc">0</b><span>مورد تعليمي</span></div>
+  <div class="stat"><b>6</b><span>مستويات دراسية</span></div>
+  <div class="stat"><b>8</b><span>مواد دراسية</span></div>
+  <div class="stat"><b>4</b><span>أنواع محتوى</span></div>
+  <div class="stat"><b>مجاني</b><span>للجميع</span></div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="active" onclick="navAll(this,event)">🏠 الكل</a>
+    <a href="#" onclick="navSubj(this,'math',event)">🔢 الرياضيات</a>
+    <a href="#" onclick="navSubj(this,'arabic',event)">📖 العربية</a>
+    <a href="#" onclick="navSubj(this,'french',event)">🇫🇷 الفرنسية</a>
+    <a href="#" onclick="navSubj(this,'science',event)">🔬 العلوم</a>
+    <a href="#" onclick="navSubj(this,'social',event)">🗺️ الاجتماعيات</a>
+    <a href="#" onclick="navSubj(this,'islamic',event)">☪️ التربية الإسلامية</a>
+    <a href="#" onclick="navSubj(this,'sport',event)">⚽ التربية البدنية</a>
+    <a href="#" onclick="navSubj(this,'art',event)">🎨 التربية الفنية</a>
+  </div>
+</nav>
+
+<main>
+<div class="srch-wrap">
+  <h2>🔍 ابحث عن أي مورد تعليمي</h2>
+  <p>اكتب اسم الدرس أو المادة أو المستوى للعثور على ما تحتاجه</p>
+  <div class="sbox">
+    <input type="text" id="si" placeholder="مثال: الجمع، الفعل المضارع، المغرب..." oninput="doSearch()">
+    <button onclick="doSearch()">🔍 بحث</button>
+  </div>
+</div>
+
+<div class="sec-hdr"><div class="sec-line"></div><div class="sec-title">📚 اختر المستوى الدراسي</div><div class="sec-line r"></div></div>
+<div class="lvls-grid">
+  <div class="lq lv1" onclick="doLevel('1')"><span class="lq-em">🌱</span><div class="lq-nm">المستوى الأول</div><div class="lq-ct" id="lc1"></div></div>
+  <div class="lq lv2" onclick="doLevel('2')"><span class="lq-em">🌿</span><div class="lq-nm">المستوى الثاني</div><div class="lq-ct" id="lc2"></div></div>
+  <div class="lq lv3" onclick="doLevel('3')"><span class="lq-em">🌳</span><div class="lq-nm">المستوى الثالث</div><div class="lq-ct" id="lc3"></div></div>
+  <div class="lq lv4" onclick="doLevel('4')"><span class="lq-em">🎓</span><div class="lq-nm">المستوى الرابع</div><div class="lq-ct" id="lc4"></div></div>
+  <div class="lq lv5" onclick="doLevel('5')"><span class="lq-em">🚀</span><div class="lq-nm">المستوى الخامس</div><div class="lq-ct" id="lc5"></div></div>
+  <div class="lq lv6" onclick="doLevel('6')"><span class="lq-em">🏆</span><div class="lq-nm">المستوى السادس</div><div class="lq-ct" id="lc6"></div></div>
+</div>
+
+<div class="sec-hdr"><div class="sec-line"></div><div class="sec-title">📘 اختر المادة الدراسية</div><div class="sec-line r"></div></div>
+<div class="subj-grid">
+  <div class="sq bc-math" onclick="doSubj('math')"><span class="sq-ic">🔢</span><div class="sq-nm">الرياضيات</div><div class="sq-ct">دروس، تمارين، فروض</div></div>
+  <div class="sq bc-arabic" onclick="doSubj('arabic')"><span class="sq-ic">📖</span><div class="sq-nm">اللغة العربية</div><div class="sq-ct">قراءة، كتابة، نحو</div></div>
+  <div class="sq bc-french" onclick="doSubj('french')"><span class="sq-ic">🇫🇷</span><div class="sq-nm">اللغة الفرنسية</div><div class="sq-ct">Lecture, Grammaire</div></div>
+  <div class="sq bc-science" onclick="doSubj('science')"><span class="sq-ic">🔬</span><div class="sq-nm">العلوم</div><div class="sq-ct">علوم الحياة، بيئة</div></div>
+  <div class="sq bc-social" onclick="doSubj('social')"><span class="sq-ic">🗺️</span><div class="sq-nm">الاجتماعيات</div><div class="sq-ct">تاريخ، جغرافيا</div></div>
+  <div class="sq bc-islamic" onclick="doSubj('islamic')"><span class="sq-ic">☪️</span><div class="sq-nm">التربية الإسلامية</div><div class="sq-ct">عقيدة، فقه، قرآن</div></div>
+  <div class="sq bc-sport" onclick="doSubj('sport')"><span class="sq-ic">⚽</span><div class="sq-nm">التربية البدنية</div><div class="sq-ct">تمارين، ألعاب</div></div>
+  <div class="sq bc-art" onclick="doSubj('art')"><span class="sq-ic">🎨</span><div class="sq-nm">التربية الفنية</div><div class="sq-ct">رسم، ألوان</div></div>
+</div>
+
+<div class="sec-hdr"><div class="sec-line"></div><div class="sec-title">📂 جميع الموارد التعليمية</div><div class="sec-line r"></div></div>
+<div class="fbar">
+  <span class="flbl">نوع المحتوى:</span>
+  <button class="ftag active" onclick="doType(this,'all')">الكل</button>
+  <button class="ftag" onclick="doType(this,'درس')">📄 دروس</button>
+  <button class="ftag" onclick="doType(this,'تمرين')">✏️ تمارين</button>
+  <button class="ftag" onclick="doType(this,'فرض')">📊 فروض</button>
+  <button class="ftag" onclick="doType(this,'ملخص')">📋 ملخصات</button>
+</div>
+<div class="rcount" id="rc"></div>
+<div class="cgrid" id="grid"></div>
+<div class="pag" id="pag"></div>
+</main>
+
+<footer>
+  <div class="fg">
+    <div>
+      <span class="fb-t">⭐ نجوم التعلم</span>
+      <p class="fb-d">منصة تعليمية مغربية مجانية شاملة لجميع مستويات السلك الابتدائي وفق مناهج وزارة التربية الوطنية.</p>
+      <div class="socs"><span class="soc">📘</span><span class="soc">📸</span><span class="soc">▶️</span><span class="soc">💬</span></div>
+    </div>
+    <div class="fc"><h4>المستويات</h4><ul>
+      <li><a href="#">🌱 المستوى الأول</a></li><li><a href="#">🌿 الثاني</a></li>
+      <li><a href="#">🌳 الثالث</a></li><li><a href="#">🎓 الرابع</a></li>
+      <li><a href="#">🚀 الخامس</a></li><li><a href="#">🏆 السادس</a></li>
+    </ul></div>
+    <div class="fc"><h4>المواد</h4><ul>
+      <li><a href="#">🔢 الرياضيات</a></li><li><a href="#">📖 العربية</a></li>
+      <li><a href="#">🇫🇷 الفرنسية</a></li><li><a href="#">🔬 العلوم</a></li>
+      <li><a href="#">🗺️ الاجتماعيات</a></li><li><a href="#">☪️ الإسلامية</a></li>
+    </ul></div>
+    <div class="fc"><h4>الموقع</h4><ul>
+      <li><a href="#">ℹ️ من نحن</a></li><li><a href="#">📬 اتصل بنا</a></li>
+      <li><a href="#">🤝 شركاؤنا</a></li><li><a href="#">📋 الخصوصية</a></li>
+      <li><a href="#">❓ الأسئلة الشائعة</a></li>
+    </ul></div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 نجوم التعلم — جميع الحقوق محفوظة</span>
+    <span>🇲🇦 صُنع في المغرب بـ ❤️ للتعليم</span>
+  </div>
+</footer>
+
+<button class="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+
+<div class="moverlay" id="mo" onclick="if(event.target===this)closeMo()">
+  <div class="modal">
+    <button class="mcls" onclick="closeMo()">✕</button>
+    <span class="m-ic" id="m-ic"></span>
+    <div class="m-title" id="m-title"></div>
+    <div class="m-tags" id="m-tags"></div>
+    <div class="m-body" id="m-body"></div>
+    <div class="mbtns">
+      <button class="mbtn mbtn-g" onclick="alert('سيتم ربط التحميل بملف PDF حقيقي قريباً!')">📥 تحميل PDF</button>
+      <button class="mbtn mbtn-b" onclick="alert('سيتم ربط التحميل بملف Word قريباً!')">📄 تحميل Word</button>
+      <button class="mbtn mbtn-o" onclick="closeMo()">إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA=[
+// MATH
+{id:1,s:'math',l:'1',t:'درس',ic:'🔢',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'الأعداد من 0 إلى 20 — القراءة والكتابة والترتيب',u:'الوحدة 1',d:'التعرف على الأعداد من 0 إلى 20 وقراءتها وكتابتها وترتيبها تصاعدياً وتنازلياً.',body:`<h4>🎯 الأهداف</h4><ul><li>قراءة الأعداد من 0 إلى 20 والتعرف عليها</li><li>كتابة الأعداد بالأرقام والحروف</li><li>ترتيب الأعداد تصاعدياً وتنازلياً</li></ul><h4>📖 محتوى الدرس</h4><ul><li>الأعداد: صفر، واحد، اثنان، ثلاثة، أربعة، خمسة...</li><li>مقارنة الأعداد باستخدام > و < و =</li></ul><h4>✏️ تمارين</h4><ul><li>أكمل: 5 &lt; __ &lt; 7</li><li>رتب تصاعدياً: 12، 5، 18، 3، 9</li><li>اكتب بالحروف: 15 = ___</li></ul>`},
+{id:2,s:'math',l:'1',t:'تمرين',ic:'✏️',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'تمارين الجمع والطرح في حدود العشرة',u:'الوحدة 2',d:'مجموعة تمارين متنوعة على الجمع والطرح مع التصحيح.',body:`<h4>✏️ الجمع</h4><ul><li>3+4=___</li><li>6+2=___</li><li>5+5=___</li></ul><h4>✏️ الطرح</h4><ul><li>9-3=___</li><li>7-4=___</li><li>10-6=___</li></ul><h4>✅ التصحيح</h4><ul><li>7 — 8 — 10</li><li>6 — 3 — 4</li></ul>`},
+{id:3,s:'math',l:'2',t:'درس',ic:'🔢',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'الجمع والطرح بالاحتياط في حدود 100',u:'الوحدة 3',d:'تعلم تقنيات الجمع والطرح بالاحتياط للأعداد في حدود 100.',body:`<h4>📖 الجمع بالاحتياط</h4><ul><li>47 + 35 = 82 (7+5=12 نكتب 2 ونحتاط بـ1)</li></ul><h4>✏️ تمارين</h4><ul><li>56 + 37 = ___</li><li>84 - 46 = ___</li><li>73 + 18 = ___</li></ul><h4>✅ التصحيح</h4><ul><li>93 — 38 — 91</li></ul>`},
+{id:4,s:'math',l:'2',t:'فرض',ic:'📊',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'فرض الفصل الأول — الرياضيات — المستوى الثاني',u:'الفصل 1',d:'فرض نموذجي للفصل الأول مع التصحيح يغطي الجمع والطرح والمقارنة.',body:`<h4>التمرين 1 (6 ن)</h4><ul><li>67 + 25 = ___</li><li>82 - 37 = ___</li><li>34 + ___ = 50</li></ul><h4>التمرين 2 (6 ن)</h4><ul><li>رتب: 45، 12، 78، 30</li><li>قارن: 49 ___ 52</li></ul><h4>مسألة (8 ن)</h4><ul><li>عند أحمد 35 كرة، اشترى 27. كم عنده؟</li></ul><h4>✅ التصحيح</h4><ul><li>92 — 45 — 16</li><li>12،30،45،78 — 49 &lt; 52</li><li>35+27=62 كرة</li></ul>`},
+{id:5,s:'math',l:'3',t:'درس',ic:'🔢',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'جدول الضرب من 1 إلى 10',u:'الوحدة 4',d:'حفظ وتطبيق جدول الضرب الكامل مع تقنيات التذكر.',body:`<h4>📖 جدول 6</h4><ul><li>6×1=6، 6×2=12، 6×3=18، 6×4=24، 6×5=30</li><li>6×6=36، 6×7=42، 6×8=48، 6×9=54، 6×10=60</li></ul><h4>💡 تقنيات</h4><ul><li>ضرب في 5: تنتهي بـ 0 أو 5</li><li>ضرب في 10: أضف صفراً</li><li>ضرب في 9: مجموع أرقام النتيجة = 9</li></ul><h4>✏️ تمارين</h4><ul><li>7×8=___ ، 9×6=___ ، 4×7=___</li><li>56 — 54 — 28</li></ul>`},
+{id:6,s:'math',l:'3',t:'ملخص',ic:'📋',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'ملخص شامل — الرياضيات — المستوى الثالث',u:'نهاية السنة',d:'ملخص جميع دروس الرياضيات للمستوى الثالث.',body:`<h4>📋 الأعداد</h4><ul><li>حتى 9999: آحاد، عشرات، مئات، آلاف</li></ul><h4>📋 العمليات</h4><ul><li>الجمع والطرح بالاحتياط</li><li>الضرب: جداول 1 إلى 10</li><li>القسمة: المفهوم والباقي</li></ul><h4>📋 الهندسة</h4><ul><li>مثلث، مربع، مستطيل، دائرة</li><li>المحيط = مجموع الأضلاع</li></ul><h4>📋 القياس</h4><ul><li>طول: م، دم، سم — كتلة: كغ، غ — سعة: ل، دل</li></ul>`},
+{id:7,s:'math',l:'4',t:'درس',ic:'🔢',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'الكسور العشرية — المفهوم والعمليات',u:'الوحدة 5',d:'تعلم الكسور العشرية وقراءتها وإجراء العمليات عليها.',body:`<h4>📖 المحتوى</h4><ul><li>0.5 = خمسة أعشار</li><li>3.14 = ثلاثة وأربعة عشر من المئة</li></ul><h4>📖 العمليات</h4><ul><li>جمع: 2.5 + 1.3 = 3.8</li><li>طرح: 5.7 - 2.4 = 3.3</li></ul><h4>✏️ تمارين</h4><ul><li>4.6 + 2.8 = ___</li><li>9.3 - 4.7 = ___</li></ul><h4>✅ التصحيح</h4><ul><li>7.4 — 4.6</li></ul>`},
+{id:8,s:'math',l:'4',t:'تمرين',ic:'✏️',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'تمارين الضرب والقسمة — المستوى الرابع',u:'الوحدة 3',d:'تمارين متدرجة على الضرب والقسمة مع التصحيح.',body:`<h4>✏️ الضرب</h4><ul><li>234 × 6 = ___</li><li>145 × 12 = ___</li></ul><h4>✏️ القسمة</h4><ul><li>144 ÷ 6 = ___</li><li>325 ÷ 5 = ___</li></ul><h4>✅ التصحيح</h4><ul><li>1404 — 1740</li><li>24 — 65</li></ul>`},
+{id:9,s:'math',l:'5',t:'درس',ic:'🔢',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'النسبة المئوية — المفهوم والحساب',u:'الوحدة 6',d:'تعلم النسبة المئوية وحسابها وتطبيقاتها الحياتية.',body:`<h4>📖 المفهوم</h4><ul><li>50% من 200 = 200 × 50/100 = 100</li><li>25% من 80 = 20</li></ul><h4>✏️ تمارين</h4><ul><li>احسب 30% من 500</li><li>تخفيض 15% على 400 درهم</li></ul><h4>✅ التصحيح</h4><ul><li>150 — 60 درهم (السعر الجديد 340)</li></ul>`},
+{id:10,s:'math',l:'5',t:'فرض',ic:'📊',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'فرض الفصل الثاني — الرياضيات — المستوى الخامس',u:'الفصل 2',d:'فرض شامل مع التصحيح يغطي الكسور والنسب والهندسة.',body:`<h4>التمرين 1 (8 ن)</h4><ul><li>3/4 + 1/2 = ___</li><li>5/6 - 1/3 = ___</li><li>2/3 × 6 = ___</li></ul><h4>التمرين 2 (6 ن)</h4><ul><li>40% من 350 = ___</li><li>نسبة 15 من 60 = ___</li></ul><h4>مسألة (6 ن)</h4><ul><li>فصل 30 تلميذاً، 60% بنات. كم عدد البنات والبنين؟</li></ul><h4>✅ التصحيح</h4><ul><li>5/4 — 1/2 — 4</li><li>140 درهم — 25%</li><li>18 بنتاً، 12 صبياً</li></ul>`},
+{id:11,s:'math',l:'6',t:'درس',ic:'🔢',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'مساحة الأشكال الهندسية',u:'الوحدة 7',d:'حساب مساحات المستطيل والمثلث والدائرة.',body:`<h4>📖 القوانين</h4><ul><li>مساحة المستطيل = الطول × العرض</li><li>مساحة المثلث = القاعدة × الارتفاع ÷ 2</li><li>مساحة الدائرة = π × ن²</li></ul><h4>✏️ مثال</h4><ul><li>مستطيل 8سم × 5سم: المساحة = 40سم²</li><li>دائرة ن=7سم: 3.14 × 49 ≈ 153.86سم²</li></ul>`},
+{id:12,s:'math',l:'6',t:'ملخص',ic:'📋',icC:'ic-math',tC:'tag-math',sl:'الرياضيات',ti:'ملخص نهاية السنة — الرياضيات — المستوى السادس',u:'نهاية السنة',d:'مراجعة شاملة لجميع دروس المستوى السادس.',body:`<h4>📋 الأعداد</h4><ul><li>طبيعية، كسرية، عشرية</li><li>أولوية العمليات: ()، ÷، ×، +، -</li></ul><h4>📋 النسب والتناسب</h4><ul><li>النسبة المئوية والتناسب المباشر والعكسي</li></ul><h4>📋 الهندسة</h4><ul><li>المساحات والأحجام وتحويل الوحدات</li></ul><h4>📋 الإحصاء</h4><ul><li>المعدل الحسابي وقراءة الرسوم البيانية</li></ul>`},
+// ARABIC
+{id:13,s:'arabic',l:'1',t:'درس',ic:'📖',icC:'ic-arabic',tC:'tag-arabic',sl:'العربية',ti:'الحروف الهجائية — الكتابة والقراءة',u:'الوحدة 1',d:'تعلم كتابة وقراءة الحروف الهجائية في أشكالها المختلفة.',body:`<h4>📖 الحروف الـ28</h4><ul><li>أ ب ت ث ج ح خ د ذ ر ز</li><li>س ش ص ض ط ظ ع غ ف ق</li><li>ك ل م ن هـ و ي</li></ul><h4>💡 أشكال الحرف</h4><ul><li>الباء في البداية: بَ — في الوسط: ـبـ — في النهاية: ـب</li></ul><h4>✏️ تمرين</h4><ul><li>اكتب كل حرف في أشكاله الثلاثة</li></ul>`},
+{id:14,s:'arabic',l:'2',t:'درس',ic:'📖',icC:'ic-arabic',tC:'tag-arabic',sl:'العربية',ti:'درس القراءة: الطفل والطبيعة',u:'الوحدة 2',d:'نص قرائي عن الطبيعة مع أسئلة الفهم والمفردات.',body:`<h4>📖 النص</h4><p>"خرج سميرٌ إلى الحديقةِ في الصباحِ الباكرِ. رأى الأزهارَ الملوَّنةَ والأشجارَ الخضراءَ والطيورَ تُغنِّي. شعرَ بالسعادةِ."</p><h4>❓ أسئلة</h4><ul><li>من هو بطل القصة؟</li><li>أين ذهب؟ ماذا رأى؟ كيف شعر؟</li></ul><h4>📝 مفردات</h4><ul><li>الصباح الباكر: بداية النهار</li></ul>`},
+{id:15,s:'arabic',l:'3',t:'درس',ic:'📖',icC:'ic-arabic',tC:'tag-arabic',sl:'العربية',ti:'النحو: الاسم والفعل والحرف',u:'الوحدة 3',d:'التمييز بين أقسام الكلام مع أمثلة وتمارين.',body:`<h4>📖 الاسم</h4><ul><li>يدل على شيء: كتابٌ، مدرسةٌ، أحمدُ</li><li>يقبل أل التعريف والتنوين</li></ul><h4>📖 الفعل</h4><ul><li>يدل على حدث: كتبَ، يذهبُ، اقرأْ</li><li>ماضٍ، مضارع، أمر</li></ul><h4>📖 الحرف</h4><ul><li>في، على، من، إلى، واو، فاء</li></ul><h4>✏️ تمرين</h4><ul><li>صنّف: ذهبَ — الولدُ — إلى — المدرسةِ</li></ul>`},
+{id:16,s:'arabic',l:'4',t:'تمرين',ic:'✏️',icC:'ic-arabic',tC:'tag-arabic',sl:'العربية',ti:'تمارين الإعراب — المبتدأ والخبر',u:'الوحدة 4',d:'تمارين على إعراب الجملة الاسمية مع التصحيح.',body:`<h4>✏️ أعرب</h4><ul><li>المدرسةُ جميلةٌ</li><li>الطالبُ مجتهدٌ</li></ul><h4>✅ النموذج</h4><ul><li>المدرسةُ: مبتدأ مرفوع وعلامة رفعه الضمة</li><li>جميلةٌ: خبر مرفوع وعلامة رفعه الضمة</li></ul><h4>✏️ مزيد</h4><ul><li>البيتُ واسعٌ — الأمُّ طيبةٌ — القلمُ أزرقُ</li></ul>`},
+{id:17,s:'arabic',l:'5',t:'درس',ic:'📖',icC:'ic-arabic',tC:'tag-arabic',sl:'العربية',ti:'التعبير الكتابي — كتابة رسالة',u:'الوحدة 5',d:'تعلم كتابة رسالة شخصية مع الهيكل والأسلوب.',body:`<h4>📖 مكونات الرسالة</h4><ul><li>التاريخ والمكان</li><li>المقدمة: أخي العزيز...</li><li>الجسم: موضوع الرسالة</li><li>الخاتمة: مع التحيات</li><li>التوقيع</li></ul><h4>📝 نموذج</h4><p>الدار البيضاء في 10 ماي 2025<br>صديقي أمين،<br>أكتب إليك لأخبرك...<br>أخوك يوسف</p>`},
+{id:18,s:'arabic',l:'6',t:'ملخص',ic:'📋',icC:'ic-arabic',tC:'tag-arabic',sl:'العربية',ti:'ملخص القواعد النحوية — المستوى السادس',u:'نهاية السنة',d:'ملخص شامل لجميع القواعد النحوية للمستوى السادس.',body:`<h4>📋 الجملة الاسمية</h4><ul><li>المبتدأ والخبر (مرفوعان)</li></ul><h4>📋 الجملة الفعلية</h4><ul><li>الفعل والفاعل والمفعول به</li></ul><h4>📋 علامات الإعراب</h4><ul><li>رفع: ضمة، واو، ألف</li><li>نصب: فتحة، ياء، كسرة</li><li>جر: كسرة، ياء، فتحة</li><li>جزم: سكون، حذف النون</li></ul><h4>📋 الصرف</h4><ul><li>مفرد، مثنى، جمع سالم وتكسير</li></ul>`},
+// FRENCH
+{id:19,s:'french',l:'1',t:'درس',ic:'🇫🇷',icC:'ic-french',tC:'tag-french',sl:'الفرنسية',ti:"L'alphabet français",u:'Unité 1',d:"تعلم الحروف الفرنسية الـ26 ونطقها.",body:`<h4>📖 L'alphabet</h4><ul><li>A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z</li></ul><h4>💡 Les voyelles</h4><ul><li>A, E, I, O, U, Y</li></ul><h4>✏️ Exercice</h4><ul><li>A: Arbre, Ami, Avion</li><li>E: École, Élève, Étoile</li></ul>`},
+{id:20,s:'french',l:'3',t:'درس',ic:'🇫🇷',icC:'ic-french',tC:'tag-french',sl:'الفرنسية',ti:"La conjugaison du présent — verbes en -er",u:'Unité 2',d:"تصريف أفعال المجموعة الأولى في زمن الحاضر.",body:`<h4>📖 Terminaisons</h4><ul><li>Je: -e | Tu: -es | Il/Elle: -e</li><li>Nous: -ons | Vous: -ez | Ils: -ent</li></ul><h4>📖 PARLER</h4><ul><li>Je parle, Tu parles, Il parle</li><li>Nous parlons, Vous parlez, Ils parlent</li></ul><h4>✏️ Exercice</h4><ul><li>Conjugue: CHANTER, MARCHER</li></ul>`},
+{id:21,s:'french',l:'5',t:'فرض',ic:'📊',icC:'ic-french',tC:'tag-french',sl:'الفرنسية',ti:"Devoir — Français — 5ème année",u:'1er semestre',d:"فرض نموذجي للفرنسية مع التصحيح.",body:`<h4>📖 Texte</h4><p>"Le printemps est arrivé. Les fleurs poussent dans le jardin. Les enfants jouent dehors."</p><h4>❓ Questions (8 pts)</h4><ul><li>Quelle saison? Où poussent les fleurs? Que font les enfants?</li></ul><h4>📝 Grammaire (6 pts)</h4><ul><li>Conjugue: Les enfants (jouer)</li><li>Pluriel: La belle fleur → ___</li></ul><h4>✅ Correction</h4><ul><li>Le printemps — Dans le jardin — jouent</li><li>Les belles fleurs</li></ul>`},
+{id:22,s:'french',l:'6',t:'ملخص',ic:'📋',icC:'ic-french',tC:'tag-french',sl:'الفرنسية',ti:"Résumé de grammaire — 6ème année",u:"Fin d'année",d:"ملخص قواعد الفرنسية للمستوى السادس.",body:`<h4>📋 Les temps</h4><ul><li>Présent: Je mange</li><li>Passé composé: J'ai mangé</li><li>Futur: Je mangerai</li><li>Imparfait: Je mangeais</li></ul><h4>📋 Les groupes</h4><ul><li>1er: -er (parler) | 2ème: -ir (finir) | 3ème: irréguliers</li></ul>`},
+// SCIENCE
+{id:23,s:'science',l:'2',t:'درس',ic:'🔬',icC:'ic-science',tC:'tag-science',sl:'العلوم',ti:'الكائنات الحية وغير الحية',u:'الوحدة 1',d:'التمييز بين الكائنات الحية وغير الحية عبر خصائص الحياة.',body:`<h4>📖 خصائص الحي</h4><ul><li>🌱 يتغذى</li><li>🌬️ يتنفس</li><li>📈 ينمو</li><li>🔄 يتكاثر</li><li>☠️ يموت</li></ul><h4>✏️ تمييز</h4><ul><li>حي: نبتة، كلب، سمكة</li><li>غير حي: حجر، ماء، كتاب</li></ul>`},
+{id:24,s:'science',l:'4',t:'درس',ic:'🔬',icC:'ic-science',tC:'tag-science',sl:'العلوم',ti:'دورة الماء في الطبيعة',u:'الوحدة 3',d:'فهم مراحل دورة الماء: التبخر، التكاثف، التساقط.',body:`<h4>📖 مراحل الدورة</h4><ul><li>☀️ التبخر: الشمس تسخن الماء</li><li>☁️ التكاثف: البخار يصعد ويتحول لسحاب</li><li>🌧️ التساقط: مطر وثلج</li><li>🌊 الجريان في الأنهار</li></ul>`},
+{id:25,s:'science',l:'5',t:'تمرين',ic:'✏️',icC:'ic-science',tC:'tag-science',sl:'العلوم',ti:'تمارين الجهاز الهضمي',u:'الوحدة 4',d:'تمارين على أعضاء الجهاز الهضمي ومراحله.',body:`<h4>✏️ رتب مراحل الهضم</h4><ul><li>المعدة، الفم، الأمعاء الدقيقة، المريء، الأمعاء الغليظة</li></ul><h4>✅ الترتيب</h4><ul><li>الفم ← المريء ← المعدة ← الأمعاء الدقيقة ← الغليظة</li></ul><h4>✏️ أكمل</h4><ul><li>يبدأ الهضم في ___ — تمتص ___ الغذاء إلى الدم</li></ul><h4>✅ الإجابة</h4><ul><li>الفم — الأمعاء الدقيقة</li></ul>`},
+{id:26,s:'science',l:'6',t:'درس',ic:'🔬',icC:'ic-science',tC:'tag-science',sl:'العلوم',ti:'التكاثر عند الكائنات الحية',u:'الوحدة 5',d:'أنواع التكاثر: الجنسي واللاجنسي عند الإنسان والنباتات.',body:`<h4>📖 التكاثر الجنسي</h4><ul><li>يحتاج ذكراً وأنثى</li><li>عند الإنسان: بويضة + حيوان منوي → جنين</li><li>عند النبات: حبوب لقاح + مبيض → بذرة</li></ul><h4>📖 التكاثر اللاجنسي</h4><ul><li>البتر: قطعة نبات تنمو</li><li>التعقيل: فسيلة النخيل</li></ul>`},
+// SOCIAL
+{id:27,s:'social',l:'3',t:'درس',ic:'🗺️',icC:'ic-social',tC:'tag-social',sl:'الاجتماعيات',ti:'المملكة المغربية — الموقع والحدود',u:'الوحدة 1',d:'موقع المغرب الجغرافي وحدوده وتضاريسه.',body:`<h4>📖 الموقع</h4><ul><li>شمال غرب أفريقيا</li><li>يطل على المحيط الأطلسي غرباً والبحر الأبيض المتوسط شمالاً</li></ul><h4>📖 الحدود</h4><ul><li>شمال: إسبانيا — شرق: الجزائر — جنوب: موريتانيا</li></ul><h4>📖 التضاريس</h4><ul><li>جبال: الأطلس الكبير، الريف</li><li>أنهار: أم الربيع، سبو، ملوية</li></ul>`},
+{id:28,s:'social',l:'4',t:'درس',ic:'🗺️',icC:'ic-social',tC:'tag-social',sl:'الاجتماعيات',ti:'الدولة المرينية',u:'الوحدة 2',d:'إنجازات الدولة المرينية الحضارية والمعمارية.',body:`<h4>📖 المرينيون</h4><ul><li>حكمت المغرب القرن 13-15م</li><li>عاصمتها: فاس</li></ul><h4>🏛️ الإنجازات</h4><ul><li>مدرسة بو عنانية، مدرسة العطارين</li><li>توسيع جامعة القرويين</li><li>الزليج والنقوش المعمارية</li></ul>`},
+{id:29,s:'social',l:'5',t:'تمرين',ic:'✏️',icC:'ic-social',tC:'tag-social',sl:'الاجتماعيات',ti:'تمارين الجهات الـ12 للمغرب',u:'الوحدة 3',d:'تمارين على جهات المغرب وعواصمها.',body:`<h4>✏️ أكمل</h4><ul><li>جهة الدار البيضاء سطات — عاصمتها: ___</li><li>جهة مراكش آسفي — عاصمتها: ___</li><li>جهة فاس مكناس — عاصمتها: ___</li></ul><h4>✅ التصحيح</h4><ul><li>الدار البيضاء — مراكش — فاس</li></ul><h4>✏️ أسئلة</h4><ul><li>كم عدد جهات المغرب؟ (12)</li><li>ما العاصمة الإدارية؟ (الرباط)</li></ul>`},
+{id:30,s:'social',l:'6',t:'فرض',ic:'📊',icC:'ic-social',tC:'tag-social',sl:'الاجتماعيات',ti:'فرض الاجتماعيات — المستوى السادس',u:'الفصل 2',d:'فرض شامل في التاريخ والجغرافيا مع التصحيح.',body:`<h4>الجغرافيا (10 ن)</h4><ul><li>ما أعلى قمة في المغرب؟ (توبقال 4165م)</li><li>اذكر 3 من الجهات المطلة على البحر المتوسط</li></ul><h4>التاريخ (10 ن)</h4><ul><li>متى حصل المغرب على الاستقلال؟ (2 مارس 1956)</li><li>من الملك عند الاستقلال؟ (محمد الخامس)</li></ul>`},
+// ISLAMIC
+{id:31,s:'islamic',l:'1',t:'درس',ic:'☪️',icC:'ic-islamic',tC:'tag-islamic',sl:'الإسلامية',ti:'أركان الإسلام الخمسة',u:'الوحدة 1',d:'تعلم أركان الإسلام الخمسة وشرح كل ركن.',body:`<h4>📖 الأركان</h4><ul><li>1️⃣ الشهادتان</li><li>2️⃣ الصلاة: خمس مرات يومياً</li><li>3️⃣ الزكاة: للفقراء</li><li>4️⃣ الصيام: رمضان</li><li>5️⃣ الحج: مرة في العمر</li></ul><h4>💡 للحفظ</h4><ul><li>شَصَزَصَحَ: شهادة، صلاة، زكاة، صيام، حج</li></ul>`},
+{id:32,s:'islamic',l:'4',t:'درس',ic:'☪️',icC:'ic-islamic',tC:'tag-islamic',sl:'الإسلامية',ti:'سيرة النبي ﷺ — الولادة والنشأة',u:'الوحدة 3',d:'قصة ولادة النبي ﷺ ونشأته في مكة.',body:`<h4>📖 الولادة</h4><ul><li>في مكة المكرمة، عام الفيل</li><li>أبوه: عبد الله — أمه: آمنة</li></ul><h4>📖 النشأة</h4><ul><li>أرضعته حليمة السعدية</li><li>كفله جده عبد المطلب ثم عمه أبو طالب</li></ul><h4>💡 صفاته ﷺ</h4><ul><li>الصدق، الأمانة، الكرم، الرحمة</li></ul>`},
+{id:33,s:'islamic',l:'6',t:'ملخص',ic:'📋',icC:'ic-islamic',tC:'tag-islamic',sl:'الإسلامية',ti:'ملخص التربية الإسلامية — المستوى السادس',u:'نهاية السنة',d:'مراجعة شاملة لمقررات الإسلامية.',body:`<h4>📋 العقيدة</h4><ul><li>أركان الإيمان الستة</li></ul><h4>📋 الفقه</h4><ul><li>الطهارة — الصلاة — الصيام</li></ul><h4>📋 السيرة</h4><ul><li>قبل وبعد البعثة — الهجرة — الغزوات</li></ul><h4>📋 الأخلاق</h4><ul><li>بر الوالدين، الصدق، الأمانة</li></ul>`},
+{id:34,s:'islamic',l:'3',t:'تمرين',ic:'✏️',icC:'ic-islamic',tC:'tag-islamic',sl:'الإسلامية',ti:'تمارين أحكام الوضوء',u:'الوحدة 2',d:'تمارين على فروض الوضوء ونواقضه.',body:`<h4>✏️ فروض الوضوء الستة</h4><ul><li>اذكرها بالترتيب</li></ul><h4>✅ الإجابة</h4><ul><li>النية — غسل الوجه — اليدان إلى المرفقين</li><li>مسح الرأس — الرجلان إلى الكعبين — الترتيب</li></ul><h4>✏️ نواقض الوضوء</h4><ul><li>اذكر 3 منها</li></ul><h4>✅ الإجابة</h4><ul><li>الحدث — النوم — أكل لحم الإبل</li></ul>`},
+// SPORT
+{id:35,s:'sport',l:'2',t:'درس',ic:'⚽',icC:'ic-sport',tC:'tag-sport',sl:'البدنية',ti:'تمارين الإحماء والتهدئة',u:'الوحدة 1',d:'أهمية الإحماء وتمارين التهدئة للوقاية من الإصابات.',body:`<h4>🎯 أهمية الإحماء</h4><ul><li>تحضير العضلات للجهد</li><li>الوقاية من الإصابات</li></ul><h4>🏃 تمارين الإحماء (10 د)</h4><ul><li>جري خفيف — تحريك الرقبة — تدوير الذراعين</li></ul><h4>🧘 التهدئة (5 د)</h4><ul><li>مشي هادئ — تمديد — تنفس عميق</li></ul>`},
+{id:36,s:'sport',l:'5',t:'درس',ic:'⚽',icC:'ic-sport',tC:'tag-sport',sl:'البدنية',ti:'قواعد كرة القدم والتقنيات',u:'الوحدة 3',d:'القواعد الأساسية وتقنيات التمرير والتسديد.',body:`<h4>📖 القواعد</h4><ul><li>11 لاعباً، 90 دقيقة (شوطان)</li></ul><h4>⚽ التقنيات</h4><ul><li>التمرير: بباطن القدم بدقة</li><li>التسديد: نحو المرمى بقوة</li><li>المراوغة: تجاوز المنافس</li></ul>`},
+// ART
+{id:37,s:'art',l:'2',t:'درس',ic:'🎨',icC:'ic-art',tC:'tag-art',sl:'الفنية',ti:'الألوان الأساسية والثانوية',u:'الوحدة 1',d:'الألوان الأساسية الثلاثة وكيفية الحصول على الثانوية.',body:`<h4>🎨 الأساسية</h4><ul><li>🔴 أحمر — 🔵 أزرق — 🟡 أصفر</li></ul><h4>🎨 الثانوية</h4><ul><li>أحمر + أصفر = 🟠 برتقالي</li><li>أزرق + أصفر = 🟢 أخضر</li><li>أحمر + أزرق = 🟣 بنفسجي</li></ul><h4>✏️ نشاط</h4><ul><li>جرب الخلط بألوان مائية</li></ul>`},
+{id:38,s:'art',l:'4',t:'درس',ic:'🎨',icC:'ic-art',tC:'tag-art',sl:'الفنية',ti:'الزخرفة المغربية — الزليج والأرابيسك',u:'الوحدة 2',d:'الزخرفة التقليدية المغربية: الزليج والأرابيسك.',body:`<h4>🔷 الزليج</h4><ul><li>قطع خزفية ملونة تشكل أنماطاً هندسية</li><li>ألوانه: أزرق، أخضر، أبيض، أصفر</li><li>يُصنع في فاس والرباط</li></ul><h4>🌿 الأرابيسك</h4><ul><li>زخرفة نباتية متشابكة</li><li>تُنفَّذ بالجبس أو الخشب</li></ul><h4>✏️ نشاط</h4><ul><li>ارسم نمطاً هندسياً وألوّنه كالزليج</li></ul>`}
+];
+
+let filtered=[...DATA], cType='all', cSubj='all', cLevel='all', cSearch='', page=1;
+const PER=9;
+
+function applyFilters(){
+  filtered=DATA.filter(x=>{
+    const mt=cType==='all'||x.t===cType;
+    const ms=cSubj==='all'||x.s===cSubj;
+    const ml=cLevel==='all'||x.l===cLevel;
+    const mq=!cSearch||x.ti.includes(cSearch)||x.d.includes(cSearch)||x.sl.includes(cSearch);
+    return mt&&ms&&ml&&mq;
+  });
+  page=1; render();
+}
+function doType(btn,t){cType=t;document.querySelectorAll('.ftag').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters();}
+function doSubj(s){cSubj=cSubj===s?'all':s;cLevel='all';cSearch='';document.getElementById('si').value='';applyFilters();document.getElementById('grid').scrollIntoView({behavior:'smooth'});}
+function doLevel(l){cLevel=cLevel===l?'all':l;cSubj='all';cSearch='';document.getElementById('si').value='';applyFilters();document.getElementById('grid').scrollIntoView({behavior:'smooth'});}
+function navSubj(a,s,e){e.preventDefault();document.querySelectorAll('.nav-inner a').forEach(x=>x.classList.remove('active'));a.classList.add('active');cSubj=s;cLevel='all';cType='all';cSearch='';document.getElementById('si').value='';document.querySelectorAll('.ftag').forEach(b=>b.classList.remove('active'));document.querySelector('.ftag').classList.add('active');applyFilters();}
+function navAll(a,e){e.preventDefault();document.querySelectorAll('.nav-inner a').forEach(x=>x.classList.remove('active'));a.classList.add('active');cSubj='all';cLevel='all';cType='all';cSearch='';document.getElementById('si').value='';document.querySelectorAll('.ftag').forEach(b=>b.classList.remove('active'));document.querySelector('.ftag').classList.add('active');applyFilters();}
+function doSearch(){cSearch=document.getElementById('si').value.trim();cSubj='all';cLevel='all';applyFilters();}
+
+function render(){
+  const g=document.getElementById('grid');
+  const p=document.getElementById('pag');
+  const rc=document.getElementById('rc');
+  const total=filtered.length;
+  const pages=Math.ceil(total/PER);
+  const items=filtered.slice((page-1)*PER,page*PER);
+  rc.textContent=`عرض ${total} مورد تعليمي`;
+  if(!items.length){g.innerHTML=`<div class="empty"><span class="empty-ic">🔍</span><p>لا توجد موارد تطابق بحثك!</p></div>`;p.innerHTML='';return;}
+  g.innerHTML=items.map(x=>`
+    <div class="ccard" onclick="openMo(${x.id})">
+      <div class="ccard-top">
+        <div class="cc-ic ${x.icC}">${x.ic}</div>
+        <div class="cc-info">
+          <div class="cc-title">${x.ti}</div>
+          <div class="cc-meta">
+            <span class="ctag ${x.tC}">${x.sl}</span>
+            <span class="ctag tag-lvl">مستوى ${x.l}</span>
+            <span class="ctag tag-${x.t}">${x.t}</span>
+          </div>
+          <div class="cc-desc">${x.d}</div>
+        </div>
+      </div>
+      <div class="ccard-bot">
+        <span class="cc-unit">${x.u}</span>
+        <div class="btns-row">
+          <button class="btn-v" onclick="event.stopPropagation();openMo(${x.id})">👁 عرض</button>
+          <button class="btn-d" onclick="event.stopPropagation();alert('سيتم ربط التحميل بـPDF قريباً!')">📥 تحميل</button>
+        </div>
+      </div>
+    </div>`).join('');
+  if(pages<=1){p.innerHTML='';return;}
+  let h='';
+  if(page>1)h+=`<button class="pbtn" onclick="goP(${page-1})">→</button>`;
+  for(let i=1;i<=pages;i++)h+=`<button class="pbtn ${i===page?'active':''}" onclick="goP(${i})">${i}</button>`;
+  if(page<pages)h+=`<button class="pbtn" onclick="goP(${page+1})">←</button>`;
+  p.innerHTML=h;
+}
+function goP(n){page=n;render();document.getElementById('grid').scrollIntoView({behavior:'smooth'});}
+
+function openMo(id){
+  const x=DATA.find(d=>d.id===id);
+  if(!x)return;
+  document.getElementById('m-ic').textContent=x.ic;
+  document.getElementById('m-title').textContent=x.ti;
+  document.getElementById('m-tags').innerHTML=`<span class="ctag ${x.tC}" style="font-size:12px;padding:4px 12px;">${x.sl}</span><span class="ctag tag-lvl" style="font-size:12px;padding:4px 12px;">المستوى ${x.l}</span><span class="ctag tag-${x.t}" style="font-size:12px;padding:4px 12px;">${x.t}</span>`;
+  document.getElementById('m-body').innerHTML=x.body;
+  document.getElementById('mo').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeMo(){document.getElementById('mo').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMo();});
+
+// Init
+document.getElementById('tc').textContent=DATA.length;
+for(let i=1;i<=6;i++){
+  const ct=DATA.filter(x=>x.l===String(i)).length;
+  document.getElementById('lc'+i).textContent=ct+' موردًا';
+}
+render();
+</script>
+</body>
+</html>
