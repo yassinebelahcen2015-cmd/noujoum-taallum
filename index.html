@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بوابة المدرسة الرائدة — موارد التعليم الصريح للسلك الابتدائي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ⚠️ استبدل YOUR_ADSENSE_ID بمعرف AdSense الخاص بك
+   ⚠️ استبدل YOUR_LINKVERTISE_ID بمعرف Linkvertise الخاص بك
+   ============================================================ */
+:root{
+  --primary:#1a5276;--primary-l:#2471a3;--primary-d:#0d3349;
+  --green:#1e8449;--green-l:#27ae60;--green-d:#145a32;
+  --gold:#d4ac0d;--gold-l:#f1c40f;--gold-bg:#fef9e7;
+  --red:#c0392b;--orange:#e67e22;--purple:#7d3c98;
+  --bg:#f0f4f8;--white:#fff;--text:#1a2530;--text-l:#5d6d7e;
+  --border:#d5e8f5;--radius:16px;
+  --sh:0 4px 24px rgba(26,82,118,.10);
+  --sh-lg:0 10px 40px rgba(26,82,118,.15);
+  --ad-bg:#fff8f0;--ad-border:#ffe0b2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* ===== TOPBAR ===== */
+.topbar{background:var(--primary-d);color:rgba(255,255,255,.85);font-size:12.5px;padding:8px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--gold);}
+.topbar-links{display:flex;gap:20px;}
+.topbar-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:12px;transition:color .2s;}
+.topbar-links a:hover{color:var(--gold-l);}
+.topbar-right{display:flex;align-items:center;gap:10px;font-size:12px;}
+
+/* ===== ADSENSE SPACES ===== */
+.ad-space{
+  background:var(--ad-bg);
+  border:2px dashed var(--ad-border);
+  border-radius:12px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  position:relative;overflow:hidden;
+  font-size:12px;color:#bf8040;font-weight:600;
+}
+.ad-space::before{
+  content:'إعلان';
+  position:absolute;top:6px;right:10px;
+  font-size:10px;color:#bbb;font-weight:400;
+}
+/* Top banner 728x90 */
+.ad-top{width:100%;height:90px;margin-bottom:28px;}
+/* Side ad 300x250 */
+.ad-side{width:300px;min-height:250px;flex-shrink:0;}
+/* Mid banner */
+.ad-mid{width:100%;height:90px;margin:28px 0;}
+/* Bottom banner */
+.ad-bottom{width:100%;height:90px;margin-top:28px;}
+/* In-card ad */
+.ad-card{height:120px;border-radius:10px;margin-bottom:18px;font-size:11px;}
+
+.ad-inner{padding:10px;}
+.ad-placeholder{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:4px;
+}
+.ad-logo{font-size:22px;}
+.ad-text{font-size:11px;color:#bbb;}
+
+/* Real AdSense tag (hidden until publisher ID added) */
+.adsense-real{display:block;width:100%;}
+
+/* ===== HEADER ===== */
+header{background:linear-gradient(160deg,var(--primary-d) 0%,var(--primary) 50%,var(--primary-l) 100%);position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hdr-wrap{max-width:1300px;margin:0 auto;padding:28px 40px;display:flex;align-items:center;gap:24px;position:relative;z-index:2;flex-wrap:wrap;}
+.hdr-logo{width:86px;height:86px;background:linear-gradient(135deg,var(--gold),var(--gold-l));border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:42px;box-shadow:0 6px 24px rgba(0,0,0,.25),0 0 0 4px rgba(255,255,255,.15);flex-shrink:0;animation:pulse 3s ease-in-out infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(0,0,0,.25),0 0 0 4px rgba(255,255,255,.15)}50%{box-shadow:0 6px 30px rgba(0,0,0,.3),0 0 0 8px rgba(255,255,255,.08)}}
+.hdr-text{flex:1;}
+.hdr-pre{display:inline-flex;align-items:center;gap:6px;background:rgba(212,172,13,.18);border:1px solid rgba(212,172,13,.35);color:var(--gold-l);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:10px;}
+.hdr-title{font-family:'Amiri',serif;font-size:40px;font-weight:700;color:#fff;line-height:1.15;text-shadow:0 2px 10px rgba(0,0,0,.3);}
+.hdr-sub{font-size:14px;color:rgba(255,255,255,.82);margin-top:6px;line-height:1.6;}
+.hdr-badges{display:flex;gap:9px;margin-top:12px;flex-wrap:wrap;}
+.hbadge{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.9);padding:6px 14px;border-radius:10px;font-size:12px;font-weight:600;}
+.hdr-stats{display:flex;flex-direction:column;gap:10px;align-items:flex-end;flex-shrink:0;}
+.hstat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 18px;text-align:center;color:#fff;min-width:88px;}
+.hstat-num{font-size:24px;font-weight:900;color:var(--gold-l);display:block;line-height:1;}
+.hstat-lbl{font-size:11px;opacity:.75;margin-top:3px;display:block;}
+
+/* ===== NAV ===== */
+nav{background:var(--white);border-bottom:3px solid var(--primary);position:sticky;top:0;z-index:200;box-shadow:0 3px 16px rgba(0,0,0,.08);}
+.nav-wrap{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.nav-links{display:flex;gap:0;overflow-x:auto;}
+.nav-links a{display:flex;align-items:center;gap:7px;padding:14px 16px;text-decoration:none;color:var(--text-l);font-size:13.5px;font-weight:700;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);border-bottom-color:var(--primary);background:#f0f6fb;}
+.nav-search{display:flex;gap:8px;align-items:center;}
+.nav-search input{padding:8px 16px;border-radius:20px;border:2px solid var(--border);font-family:'Tajawal',sans-serif;font-size:13px;outline:none;width:190px;text-align:right;transition:border-color .2s;}
+.nav-search input:focus{border-color:var(--primary);}
+.nav-search button{padding:8px 14px;background:var(--primary);color:#fff;border:none;border-radius:20px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* ===== ANNOUNCE ===== */
+.announce{background:linear-gradient(90deg,var(--green-d),var(--green));color:#fff;text-align:center;padding:10px 20px;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px;}
+.announce a{color:var(--gold-l);text-decoration:underline;}
+
+/* ===== LAYOUT WITH SIDEBAR ===== */
+.page-layout{display:flex;gap:28px;align-items:flex-start;}
+.main-col{flex:1;min-width:0;}
+.side-col{width:320px;flex-shrink:0;position:sticky;top:80px;}
+
+/* ===== MAIN ===== */
+main{max-width:1300px;margin:0 auto;padding:36px 40px;}
+
+/* ===== SECTION HEADER ===== */
+.sec-hdr{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.sec-line{flex:1;height:2px;background:linear-gradient(90deg,var(--primary),transparent);}
+.sec-line.r{background:linear-gradient(270deg,var(--primary),transparent);}
+.sec-title{font-family:'Amiri',serif;font-size:26px;color:var(--primary-d);white-space:nowrap;}
+
+/* ===== LINKVERTISE DOWNLOAD MODAL ===== */
+.lv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+.lv-overlay.open{display:flex;}
+.lv-box{background:var(--white);border-radius:20px;padding:32px;max-width:460px;width:100%;text-align:center;animation:mIn .25s ease;}
+@keyframes mIn{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+.lv-ic{font-size:56px;display:block;margin-bottom:14px;}
+.lv-title{font-family:'Amiri',serif;font-size:22px;color:var(--primary-d);margin-bottom:8px;}
+.lv-desc{font-size:13px;color:var(--text-l);line-height:1.8;margin-bottom:20px;}
+.lv-steps{background:#f0f6fb;border-radius:12px;padding:16px 20px;margin-bottom:20px;text-align:right;}
+.lv-steps h4{font-size:13px;color:var(--primary-d);margin-bottom:10px;font-weight:800;}
+.lv-step{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12.5px;color:var(--text-l);}
+.lv-step-num{width:24px;height:24px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;}
+.lv-timer{font-size:36px;font-weight:900;color:var(--primary);margin:10px 0;}
+.lv-progress{width:100%;height:6px;background:#e0e0e0;border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.lv-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary-l));border-radius:3px;width:0%;transition:width .1s linear;}
+.lv-btn{display:block;width:100%;padding:14px;background:linear-gradient(135deg,var(--green),var(--green-l));color:#fff;border:none;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:16px;font-weight:800;cursor:pointer;transition:all .2s;margin-top:8px;}
+.lv-btn:hover{background:linear-gradient(135deg,var(--green-d),var(--green));transform:translateY(-1px);}
+.lv-btn:disabled{background:#ccc;cursor:not-allowed;transform:none;}
+.lv-ad-space{background:var(--ad-bg);border:2px dashed var(--ad-border);border-radius:10px;height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:12px;color:#bf8040;font-weight:600;position:relative;}
+.lv-ad-space::before{content:'إعلان — سيظهر هنا إعلان AdSense';font-size:11px;color:#bbb;}
+.lv-close{background:none;border:none;color:var(--text-l);font-size:13px;cursor:pointer;margin-top:10px;font-family:'Tajawal',sans-serif;text-decoration:underline;}
+
+/* ===== QUICK ACCESS ===== */
+.qa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px;}
+.qa-card{background:var(--white);border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:var(--sh);cursor:pointer;transition:all .22s;border-top:4px solid;}
+.qa-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);}
+.qa-ic{font-size:34px;display:block;margin-bottom:9px;}
+.qa-name{font-size:13px;font-weight:800;}
+.qa-sub{font-size:11px;color:var(--text-l);margin-top:3px;line-height:1.5;}
+.qa-count{display:inline-block;margin-top:8px;padding:3px 12px;border-radius:10px;font-size:11px;font-weight:700;color:#fff;}
+.qa-ar{border-color:#2471a3;}.qa-ar .qa-count{background:#2471a3;}
+.qa-fr{border-color:#1e8449;}.qa-fr .qa-count{background:#1e8449;}
+.qa-ma{border-color:#d4ac0d;}.qa-ma .qa-count{background:#d4ac0d;color:#333;}
+.qa-doc{border-color:var(--purple);}.qa-doc .qa-count{background:var(--purple);}
+
+/* ===== MARHALA TABS ===== */
+.marhala-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+.mtab{padding:9px 20px;border-radius:10px;border:2px solid var(--border);background:var(--white);font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;color:var(--text-l);display:flex;align-items:center;gap:6px;}
+.mtab:hover,.mtab.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+/* ===== LEVEL FILTER ===== */
+.level-filter{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center;}
+.lf-label{font-weight:800;font-size:13px;color:var(--primary-d);}
+.lftag{padding:6px 14px;border-radius:18px;border:2px solid var(--border);background:var(--white);font-family:'Tajawal',sans-serif;font-size:12px;font-weight:700;cursor:pointer;color:var(--text-l);transition:all .2s;}
+.lftag:hover,.lftag.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+/* ===== CONTENT GRID ===== */
+.cnt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:14px;}
+
+/* ===== RESOURCE CARD ===== */
+.rcard{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--border);transition:all .22s;cursor:pointer;}
+.rcard:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:var(--primary-l);}
+.rcard-top{padding:15px 16px 11px;display:flex;gap:12px;align-items:flex-start;}
+.rcard-ic{width:48px;height:48px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.ic-ar{background:#eaf4fb;}.ic-fr{background:#eafaf1;}.ic-ma{background:#fef9e7;}.ic-doc{background:#f4ecf7;}.ic-vid{background:#fdf2f8;}
+.rcard-info{flex:1;min-width:0;}
+.rcard-title{font-size:13px;font-weight:800;color:var(--text);line-height:1.4;margin-bottom:5px;}
+.rcard-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px;}
+.rtag{padding:2px 8px;border-radius:7px;font-size:10px;font-weight:700;color:#fff;}
+.tag-ar{background:#2471a3;}.tag-fr{background:#1e8449;}.tag-ma{background:#c8960c;}.tag-doc{background:var(--primary);}.tag-vid{background:#c0392b;}.tag-lv{background:var(--text-l);}
+.rcard-desc{font-size:11px;color:var(--text-l);line-height:1.6;}
+.rcard-bot{padding:9px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:#f8fbfd;}
+.rcard-week{font-size:11px;color:var(--text-l);}
+.rcard-btns{display:flex;gap:5px;}
+.rbtn{padding:5px 11px;border:none;border-radius:7px;font-family:'Tajawal',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:3px;}
+.rbtn-view{background:#eaf4fb;color:var(--primary);}.rbtn-view:hover{background:var(--primary);color:#fff;}
+.rbtn-dl{background:linear-gradient(135deg,var(--green),var(--green-l));color:#fff;box-shadow:0 2px 8px rgba(30,132,73,.3);}.rbtn-dl:hover{background:linear-gradient(135deg,var(--green-d),var(--green));transform:translateY(-1px);}
+
+/* ===== FREE/PAID BADGE ===== */
+.rcard-badge{position:absolute;top:10px;left:10px;padding:3px 9px;border-radius:8px;font-size:10px;font-weight:800;}
+.badge-free{background:#eafaf1;color:var(--green-d);}
+.badge-paid{background:var(--gold-bg);color:#856404;}
+.rcard-top{position:relative;}
+
+/* ===== RESULTS COUNT ===== */
+.rcount{font-size:13px;color:var(--text-l);margin-bottom:12px;font-weight:600;}
+
+/* ===== EMPTY ===== */
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--text-l);}
+.empty-ic{font-size:52px;display:block;margin-bottom:10px;}
+
+/* ===== PAGINATION ===== */
+.pag{display:flex;gap:7px;justify-content:center;margin-bottom:30px;flex-wrap:wrap;}
+.pbtn{width:36px;height:36px;border-radius:9px;border:2px solid var(--border);background:var(--white);font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.pbtn:hover,.pbtn.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+/* ===== SIDEBAR WIDGETS ===== */
+.widget{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sh);margin-bottom:20px;}
+.widget-hdr{background:var(--primary);color:#fff;padding:12px 18px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px;}
+.widget-body{padding:16px;}
+
+/* income widget */
+.income-stat{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);align-items:center;}
+.income-stat:last-child{border-bottom:none;}
+.income-lbl{font-size:12px;color:var(--text-l);}
+.income-val{font-size:14px;font-weight:800;color:var(--green);}
+
+/* quick links */
+.qlink{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);transition:color .2s;}
+.qlink:last-child{border-bottom:none;}
+.qlink:hover{color:var(--primary);}
+.qlink-ic{width:34px;height:34px;background:#f0f6fb;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.qlink-info{flex:1;}
+.qlink-title{font-size:12.5px;font-weight:700;}
+.qlink-sub{font-size:11px;color:var(--text-l);}
+
+/* ===== CONTENT MODAL ===== */
+.moverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:900;align-items:center;justify-content:center;padding:20px;}
+.moverlay.open{display:flex;}
+.modal{background:var(--white);border-radius:20px;padding:28px 32px;max-width:560px;width:100%;position:relative;max-height:90vh;overflow-y:auto;animation:mIn .22s ease;}
+.mcls{position:absolute;top:12px;left:14px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-l);}
+.m-header{text-align:center;margin-bottom:16px;}
+.m-ic{font-size:46px;display:block;margin-bottom:8px;}
+.m-title{font-family:'Amiri',serif;font-size:22px;color:var(--primary-d);}
+.m-tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:10px 0 14px;}
+.m-body{background:#f0f6fb;border-radius:12px;padding:15px 18px;margin-bottom:16px;font-size:13px;line-height:2;color:var(--text);max-height:280px;overflow-y:auto;}
+.m-body h4{color:var(--primary-d);font-size:13.5px;margin-bottom:6px;margin-top:10px;}
+.m-body h4:first-child{margin-top:0;}
+.m-body ul{padding-right:17px;}
+.m-body li{margin-bottom:5px;}
+.m-body p{line-height:2.1;}
+/* Ad in modal */
+.m-ad{background:var(--ad-bg);border:2px dashed var(--ad-border);border-radius:10px;height:90px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:11px;color:#bbb;position:relative;}
+.m-ad::before{content:'📢 إعلان Google AdSense — سيظهر تلقائياً بعد تفعيل الحساب';}
+.m-dl-btn{display:block;width:100%;padding:14px;background:linear-gradient(135deg,var(--green),var(--green-l));color:#fff;border:none;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:16px;font-weight:800;cursor:pointer;transition:all .2s;text-align:center;margin-bottom:10px;}
+.m-dl-btn:hover{background:linear-gradient(135deg,var(--green-d),var(--green));transform:translateY(-1px);}
+.m-note{background:var(--gold-bg);border:1px solid rgba(212,172,13,.3);border-radius:10px;padding:11px 15px;font-size:12px;color:#7d6608;line-height:1.7;}
+
+/* ===== FEATURES ===== */
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:30px;}
+.feat{background:var(--white);border-radius:var(--radius);padding:22px 18px;box-shadow:var(--sh);}
+.feat-ic{font-size:34px;display:block;margin-bottom:10px;}
+.feat-title{font-size:14px;font-weight:800;color:var(--primary-d);margin-bottom:6px;}
+.feat-text{font-size:12px;color:var(--text-l);line-height:1.7;}
+
+/* ===== FOOTER ===== */
+footer{background:var(--primary-d);color:#fff;padding:40px 40px 18px;margin-top:20px;}
+.footer-wrap{max-width:1300px;margin:0 auto;}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+.fb-title{font-family:'Amiri',serif;font-size:22px;color:var(--gold-l);display:block;margin-bottom:8px;}
+.fb-desc{font-size:12px;opacity:.72;line-height:1.85;margin-bottom:13px;}
+.socs{display:flex;gap:8px;}
+.soc{width:34px;height:34px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;transition:background .2s;}
+.soc:hover{background:rgba(255,255,255,.2);}
+.fc h4{font-size:13px;font-weight:800;color:var(--gold-l);margin-bottom:11px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.13);}
+.fc ul{list-style:none;}
+.fc ul li{margin-bottom:8px;}
+.fc ul li a{color:rgba(255,255,255,.7);text-decoration:none;font-size:12px;transition:color .2s;display:flex;align-items:center;gap:5px;}
+.fc ul li a:hover{color:#fff;}
+.fbot{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;display:flex;justify-content:space-between;font-size:12px;opacity:.6;flex-wrap:wrap;gap:8px;}
+
+/* ===== FAB ===== */
+.fab{position:fixed;bottom:24px;left:24px;width:50px;height:50px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 5px 18px rgba(26,82,118,.4);cursor:pointer;z-index:200;border:none;color:#fff;transition:transform .2s;}
+.fab:hover{transform:scale(1.1);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1100px){.side-col{display:none;}.cnt-grid{grid-template-columns:repeat(2,1fr);}.qa-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:700px){.cnt-grid{grid-template-columns:1fr;}.topbar{display:none;}.hdr-wrap{padding:18px;gap:14px;}.hdr-title{font-size:26px;}.hdr-stats{display:none;} main{padding:24px 14px;}.nav-wrap{padding:0 10px;}.nav-search{display:none;}.fg{grid-template-columns:1fr;} footer{padding:28px 18px 14px;}}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ⚠️ تعليمات AdSense:
+     1. سجل على adsense.google.com
+     2. أضف كود التحقق في <head>
+     3. استبدل YOUR_ADSENSE_PUB_ID بمعرفك
+     4. استبدل الـ slots بأرقام وحداتك الإعلانية
+     ============================================================ -->
+
+<!-- Google AdSense Script (أضفه بعد الموافقة) -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_PUB_ID" crossorigin="anonymous"></script> -->
+
+<div class="topbar">
+  <div class="topbar-links">
+    <a href="https://www.men.gov.ma" target="_blank">🏛️ وزارة التربية</a>
+    <a href="https://portailriada.men.gov.ma" target="_blank">🌐 بوابة الريادة</a>
+    <a href="https://telmidtice.men.gov.ma" target="_blank">💻 تلميذ تيس</a>
+    <a href="https://ppn.men.gov.ma" target="_blank">📥 PPN دروس</a>
+  </div>
+  <div class="topbar-right"><span>🇲🇦 المملكة المغربية</span></div>
+</div>
+
+<header>
+  <div class="hdr-wrap">
+    <div class="hdr-logo">🏫</div>
+    <div class="hdr-text">
+      <div class="hdr-pre">⭐ مشروع الريادة — خارطة الطريق 2022-2026</div>
+      <div class="hdr-title">بوابة المدرسة الرائدة</div>
+      <div class="hdr-sub">منصة شاملة لموارد التعليم الصريح — للأساتذة والتلاميذ وأولياء الأمور</div>
+      <div class="hdr-badges">
+        <span class="hbadge">📚 تعليم صريح TaRL</span>
+        <span class="hbadge">🇲🇦 وفق المناهج الرسمية</span>
+        <span class="hbadge">🗺️ خرائط ذهنية</span>
+        <span class="hbadge">✅ مجاني جزئياً</span>
+      </div>
+    </div>
+    <div class="hdr-stats">
+      <div class="hstat"><span class="hstat-num" id="tc">0</span><span class="hstat-lbl">مورد</span></div>
+      <div class="hstat"><span class="hstat-num">4</span><span class="hstat-lbl">مراحل</span></div>
+      <div class="hstat"><span class="hstat-num">6</span><span class="hstat-lbl">مستويات</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="announce">
+  📢 دروس الوحدة الرابعة متاحة الآن &nbsp;—&nbsp; <a href="#content">تصفح المحتوى</a>
+  &nbsp;|&nbsp; 💡 التحميل عبر Linkvertise يدعم استمرارية الموقع — شكراً لتفهمكم
+</div>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-links">
+      <a href="#" class="active" onclick="navAll(this,event)">🏠 الرئيسية</a>
+      <a href="#" onclick="navMat(this,'arabic',event)">📖 العربية</a>
+      <a href="#" onclick="navMat(this,'french',event)">🇫🇷 الفرنسية</a>
+      <a href="#" onclick="navMat(this,'math',event)">🔢 الرياضيات</a>
+      <a href="#" onclick="navMat(this,'doc',event)">📁 الوثائق</a>
+      <a href="#" onclick="navMat(this,'video',event)">🎥 فيديوهات</a>
+    </div>
+    <div class="nav-search">
+      <input type="text" id="si" placeholder="ابحث عن درس..." oninput="doSearch()">
+      <button onclick="doSearch()">🔍</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== إعلان AdSense — الشريط العلوي ===== -->
+<div class="ad-space ad-top">
+  <div class="ad-placeholder">
+    <span class="ad-logo">📢</span>
+    <!-- بعد تفعيل AdSense استبدل هذا بـ: -->
+    <!--
+    <ins class="adsbygoogle adsense-real"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR_ADSENSE_PUB_ID"
+         data-ad-slot="YOUR_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+    <span class="ad-text">مساحة إعلانية — Google AdSense (728×90)</span>
+    <span style="font-size:10px;color:#ddd;margin-top:3px;">ستظهر الإعلانات تلقائياً بعد تفعيل حساب AdSense</span>
+  </div>
+</div>
+
+<div class="page-layout">
+<div class="main-col">
+
+<!-- QUICK ACCESS -->
+<div class="qa-grid">
+  <div class="qa-card qa-ar" onclick="navMat(null,'arabic',{preventDefault:()=>{}});document.getElementById('content').scrollIntoView({behavior:'smooth'})">
+    <span class="qa-ic">📖</span><div class="qa-name">اللغة العربية</div>
+    <div class="qa-sub">قراءة، كتابة، تواصل</div>
+    <span class="qa-count" id="c-ar">0</span>
+  </div>
+  <div class="qa-card qa-fr" onclick="navMat(null,'french',{preventDefault:()=>{}});document.getElementById('content').scrollIntoView({behavior:'smooth'})">
+    <span class="qa-ic">🇫🇷</span><div class="qa-name">اللغة الفرنسية</div>
+    <div class="qa-sub">Lecture, Écriture</div>
+    <span class="qa-count" id="c-fr">0</span>
+  </div>
+  <div class="qa-card qa-ma" onclick="navMat(null,'math',{preventDefault:()=>{}});document.getElementById('content').scrollIntoView({behavior:'smooth'})">
+    <span class="qa-ic">🔢</span><div class="qa-name">الرياضيات</div>
+    <div class="qa-sub">حساب، هندسة، قياس</div>
+    <span class="qa-count" id="c-ma">0</span>
+  </div>
+  <div class="qa-card qa-doc" onclick="navMat(null,'doc',{preventDefault:()=>{}});document.getElementById('content').scrollIntoView({behavior:'smooth'})">
+    <span class="qa-ic">📁</span><div class="qa-name">وثائق تربوية</div>
+    <div class="qa-sub">توازيع، دلائل، خرائط</div>
+    <span class="qa-count" id="c-doc">0</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div id="content"></div>
+<div class="sec-hdr"><div class="sec-line"></div><div class="sec-title">📂 الموارد التعليمية</div><div class="sec-line r"></div></div>
+
+<div class="marhala-tabs">
+  <button class="mtab active" onclick="doMarhala(this,'all')">📚 كل المراحل</button>
+  <button class="mtab" onclick="doMarhala(this,'1')">🟥 المرحلة 1</button>
+  <button class="mtab" onclick="doMarhala(this,'2')">🟧 المرحلة 2</button>
+  <button class="mtab" onclick="doMarhala(this,'3')">🟨 المرحلة 3</button>
+  <button class="mtab" onclick="doMarhala(this,'4')">🟩 المرحلة 4</button>
+</div>
+
+<div class="level-filter">
+  <span class="lf-label">المستوى:</span>
+  <button class="lftag active" onclick="doLevel(this,'all')">الكل</button>
+  <button class="lftag" onclick="doLevel(this,'1')">🌱 الأول</button>
+  <button class="lftag" onclick="doLevel(this,'2')">🌿 الثاني</button>
+  <button class="lftag" onclick="doLevel(this,'3')">🌳 الثالث</button>
+  <button class="lftag" onclick="doLevel(this,'4')">🎓 الرابع</button>
+  <button class="lftag" onclick="doLevel(this,'5')">🚀 الخامس</button>
+  <button class="lftag" onclick="doLevel(this,'6')">🏆 السادس</button>
+</div>
+
+<div class="rcount" id="rc"></div>
+<div class="cnt-grid" id="grid"></div>
+<div class="pag" id="pag"></div>
+
+<!-- ===== إعلان AdSense — وسط المحتوى ===== -->
+<div class="ad-space ad-mid">
+  <div class="ad-placeholder">
+    <span class="ad-logo">📢</span>
+    <!--
+    <ins class="adsbygoogle adsense-real"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR_ADSENSE_PUB_ID"
+         data-ad-slot="YOUR_MID_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+    <span class="ad-text">مساحة إعلانية — Google AdSense (وسط الصفحة)</span>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="sec-hdr"><div class="sec-line"></div><div class="sec-title">✨ مميزات البوابة</div><div class="sec-line r"></div></div>
+<div class="feat-grid">
+  <div class="feat"><span class="feat-ic">🎯</span><div class="feat-title">التعليم الصريح</div><div class="feat-text">جميع الموارد وفق منهجية Explicit Instruction المعتمدة في مدارس الريادة</div></div>
+  <div class="feat"><span class="feat-ic">🗺️</span><div class="feat-title">خرائط ذهنية</div><div class="feat-text">خرائط ذهنية ملونة لكل درس بصيغتي PDF وWord جاهزة للطباعة</div></div>
+  <div class="feat"><span class="feat-ic">📱</span><div class="feat-title">متوافق مع الهاتف</div><div class="feat-text">وصول من أي جهاز في أي وقت بدون تسجيل دخول مع تحميل سريع</div></div>
+  <div class="feat"><span class="feat-ic">🔄</span><div class="feat-title">تحديث أسبوعي</div><div class="feat-text">إضافة دروس جديدة أسبوعياً مواكبةً للتقدم في البرنامج الدراسي</div></div>
+</div>
+
+<!-- ===== إعلان AdSense — أسفل الصفحة ===== -->
+<div class="ad-space ad-bottom">
+  <div class="ad-placeholder">
+    <span class="ad-logo">📢</span>
+    <!--
+    <ins class="adsbygoogle adsense-real"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR_ADSENSE_PUB_ID"
+         data-ad-slot="YOUR_BOTTOM_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+    <span class="ad-text">مساحة إعلانية — Google AdSense (أسفل الصفحة)</span>
+  </div>
+</div>
+
+</div><!-- end main-col -->
+
+<!-- ===== SIDEBAR ===== -->
+<div class="side-col">
+
+  <!-- إعلان جانبي 300x250 -->
+  <div class="ad-space ad-side" style="margin-bottom:20px;">
+    <div class="ad-placeholder">
+      <span class="ad-logo">📢</span>
+      <!--
+      <ins class="adsbygoogle adsense-real"
+           style="display:block"
+           data-ad-client="ca-pub-YOUR_ADSENSE_PUB_ID"
+           data-ad-slot="YOUR_SIDE_SLOT_ID"
+           data-ad-format="rectangle"
+           data-full-width-responsive="false"
+           style="width:300px;height:250px"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <span class="ad-text">إعلان جانبي (300×250)</span>
+    </div>
+  </div>
+
+  <!-- إحصائيات الدخل التوضيحية -->
+  <div class="widget">
+    <div class="widget-hdr">💰 الدخل المتوقع (تقديري)</div>
+    <div class="widget-body">
+      <div class="income-stat">
+        <span class="income-lbl">AdSense / 1000 زيارة</span>
+        <span class="income-val">2–8 $</span>
+      </div>
+      <div class="income-stat">
+        <span class="income-lbl">Linkvertise / 1000 تحميل</span>
+        <span class="income-val">3–10 $</span>
+      </div>
+      <div class="income-stat">
+        <span class="income-lbl">مع 5000 زيارة/يوم</span>
+        <span class="income-val">~300–500 $/شهر</span>
+      </div>
+      <p style="font-size:11px;color:var(--text-l);margin-top:10px;line-height:1.7;">⚡ كلما زاد المحتوى، زاد عدد الزوار، وزاد الدخل</p>
+    </div>
+  </div>
+
+  <!-- روابط سريعة -->
+  <div class="widget">
+    <div class="widget-hdr">⚡ روابط مفيدة</div>
+    <div class="widget-body">
+      <a class="qlink" href="https://adsense.google.com" target="_blank">
+        <div class="qlink-ic">📢</div>
+        <div class="qlink-info"><div class="qlink-title">Google AdSense</div><div class="qlink-sub">سجل وفعّل إعلاناتك</div></div>
+      </a>
+      <a class="qlink" href="https://linkvertise.com" target="_blank">
+        <div class="qlink-ic">🔗</div>
+        <div class="qlink-info"><div class="qlink-title">Linkvertise</div><div class="qlink-sub">احصل على معرفك للتحميل</div></div>
+      </a>
+      <a class="qlink" href="https://ppn.men.gov.ma" target="_blank">
+        <div class="qlink-ic">📥</div>
+        <div class="qlink-info"><div class="qlink-title">PPN — دروس رسمية</div><div class="qlink-sub">المصدر الرسمي للدروس</div></div>
+      </a>
+      <a class="qlink" href="https://www.madrasara2ida.com" target="_blank">
+        <div class="qlink-ic">🏫</div>
+        <div class="qlink-info"><div class="qlink-title">المدرسة الرائدة</div><div class="qlink-sub">خرائط وتجميعات</div></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- إعلان جانبي ثاني -->
+  <div class="ad-space" style="min-height:200px;margin-bottom:20px;">
+    <div class="ad-placeholder">
+      <span class="ad-logo">📢</span>
+      <span class="ad-text">إعلان جانبي ثانٍ (300×200)</span>
+    </div>
+  </div>
+
+</div><!-- end side-col -->
+</div><!-- end page-layout -->
+</main>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="fg">
+      <div>
+        <span class="fb-title">🏫 بوابة المدرسة الرائدة</span>
+        <p class="fb-desc">منصة تعليمية مغربية مجانية لدعم مؤسسات الريادة — توفر موارد التعليم الصريح لجميع المستويات.</p>
+        <div class="socs"><div class="soc">📘</div><div class="soc">📸</div><div class="soc">▶️</div><div class="soc">💬</div></div>
+      </div>
+      <div class="fc"><h4>الموارد</h4><ul>
+        <li><a href="#">📖 اللغة العربية</a></li>
+        <li><a href="#">🇫🇷 اللغة الفرنسية</a></li>
+        <li><a href="#">🔢 الرياضيات</a></li>
+        <li><a href="#">🗺️ خرائط ذهنية</a></li>
+        <li><a href="#">📁 وثائق تربوية</a></li>
+      </ul></div>
+      <div class="fc"><h4>الروابط الرسمية</h4><ul>
+        <li><a href="https://www.men.gov.ma" target="_blank">🏛️ وزارة التربية</a></li>
+        <li><a href="https://portailriada.men.gov.ma" target="_blank">🌐 بوابة الريادة</a></li>
+        <li><a href="https://ppn.men.gov.ma" target="_blank">📥 PPN دروس</a></li>
+        <li><a href="https://telmidtice.men.gov.ma" target="_blank">💻 تلميذ تيس</a></li>
+        <li><a href="https://massar.men.gov.ma" target="_blank">📊 مسار</a></li>
+      </ul></div>
+      <div class="fc"><h4>الموقع</h4><ul>
+        <li><a href="#">ℹ️ من نحن</a></li>
+        <li><a href="#">📬 اتصل بنا</a></li>
+        <li><a href="#">📋 سياسة الخصوصية</a></li>
+        <li><a href="#">❓ الأسئلة الشائعة</a></li>
+        <li><a href="https://adsense.google.com" target="_blank">📢 أعلن معنا</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2025 بوابة المدرسة الرائدة</span>
+      <span>🇲🇦 بـ ❤️ لأساتذة وتلاميذ المغرب</span>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+
+<!-- ===== LINKVERTISE DOWNLOAD MODAL ===== -->
+<div class="lv-overlay" id="lv-overlay">
+  <div class="lv-box">
+    <span class="lv-ic">📥</span>
+    <div class="lv-title" id="lv-title">تحميل الملف</div>
+    <div class="lv-desc">لدعم استمرارية هذه البوابة المجانية، يرجى إتمام خطوة واحدة بسيطة قبل التحميل.</div>
+
+    <!-- إعلان AdSense داخل نافذة Linkvertise -->
+    <div class="lv-ad-space"></div>
+
+    <div class="lv-steps">
+      <h4>📋 خطوات التحميل:</h4>
+      <div class="lv-step"><div class="lv-step-num">1</div><span>انتظر انتهاء العداد (5 ثوانٍ)</span></div>
+      <div class="lv-step"><div class="lv-step-num">2</div><span>اضغط على زر التحميل الأخضر</span></div>
+      <div class="lv-step"><div class="lv-step-num">3</div><span>شاهد إعلاناً قصيراً (Linkvertise)</span></div>
+      <div class="lv-step"><div class="lv-step-num">4</div><span>حمّل ملفك مجاناً!</span></div>
+    </div>
+
+    <div class="lv-timer" id="lv-timer">5</div>
+    <div class="lv-progress"><div class="lv-bar" id="lv-bar"></div></div>
+
+    <button class="lv-btn" id="lv-btn" disabled onclick="goLinkvertise()">
+      ⏳ انتظر...
+    </button>
+    <button class="lv-close" onclick="closeLV()">إغلاق</button>
+  </div>
+</div>
+
+<!-- CONTENT MODAL -->
+<div class="moverlay" id="mo" onclick="if(event.target===this)closeMo()">
+  <div class="modal">
+    <button class="mcls" onclick="closeMo()">✕</button>
+    <div class="m-header">
+      <span class="m-ic" id="m-ic"></span>
+      <div class="m-title" id="m-title"></div>
+    </div>
+    <div class="m-tags" id="m-tags"></div>
+    <div class="m-body" id="m-body"></div>
+    <!-- إعلان AdSense في المودال -->
+    <div class="m-ad"></div>
+    <button class="m-dl-btn" id="m-dl-btn" onclick="startLV()">
+      📥 تحميل الملف (عبر Linkvertise)
+    </button>
+    <div class="m-note">
+      💡 التحميل عبر <strong>Linkvertise</strong> يدعم استمرارية هذه البوابة المجانية — شكراً لتفهمكم ❤️
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// ⚠️ إعدادات مهمة — عدّلها بمعلوماتك
+// ============================================================
+const CONFIG = {
+  // معرف Linkvertise الخاص بك (احصل عليه من linkvertise.com)
+  LINKVERTISE_ID: 'YOUR_LINKVERTISE_ID',
+  // رابط Google Drive لكل ملف (ارفع الملفات على Drive واجعلها عامة)
+  // مثال: 'https://drive.google.com/file/d/FILE_ID/view'
+};
+
+// ============================================================
+// DATA
+// ============================================================
+const DATA = [
+{id:1,mat:'arabic',mrhla:'1',lv:'1',type:'درس',ic:'📖',icC:'ic-ar',
+ title:'درس القراءة: الأسرة — المستوى الأول',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م1'],week:'الأسبوع 1',
+ desc:'قراءة نص "أسرتي" مع أنشطة الفهم والتواصل الشفهي وفق التعليم الصريح.',
+ free:true,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_1/view',
+ body:`<h4>📖 النص</h4><p>"أنا أحمد، أسكن مع أسرتي. أبي يعمل معلماً وأمي تهتم بالبيت. نحن عائلة سعيدة."</p>
+ <h4>❓ أسئلة الفهم</h4><ul><li>ما اسم البطل؟</li><li>ما عمل والده؟</li><li>كيف توصف الأسرة؟</li></ul>
+ <h4>📝 المعجم</h4><ul><li>أسرة = عائلة</li><li>يهتم = يعتني</li></ul>
+ <h4>✏️ نشاط كتابي</h4><ul><li>اكتب جملة عن أسرتك</li></ul>`},
+
+{id:2,mat:'arabic',mrhla:'1',lv:'1',type:'خريطة',ic:'🗺️',icC:'ic-ar',
+ title:'خريطة ذهنية: الأسرة — المستوى الأول',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م1'],week:'الأسبوع 1',
+ desc:'خريطة ذهنية ملونة لدرس الأسرة جاهزة للطباعة بصيغتي PDF وWord.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_2/view',
+ body:`<h4>🗺️ محتوى الخريطة</h4><ul><li>مفردات الأسرة: أب، أم، أخ، أخت، جد، جدة</li><li>أفعال: يعمل، يدرس، يلعب، يطبخ</li><li>صفات: سعيد، مجتهد، كريم</li></ul>
+ <h4>💡 الاستخدام</h4><ul><li>اطبع وعلق في الفصل</li><li>استخدمها في مرحلة الاسترجاع</li></ul>`},
+
+{id:3,mat:'arabic',mrhla:'1',lv:'2',type:'درس',ic:'📖',icC:'ic-ar',
+ title:'درس القراءة: المدرسة — المستوى الثاني',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م2'],week:'الأسبوع 2',
+ desc:'نص "مدرستي" مع أنشطة الفهم والتعبير الكتابي وفق التعليم الصريح.',
+ free:true,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_3/view',
+ body:`<h4>📖 النص</h4><p>"مدرستي جميلة. فيها فصول واسعة وملعب كبير. أساتذتي متفانون في عملهم."</p>
+ <h4>❓ أسئلة</h4><ul><li>كيف توصف المدرسة؟</li><li>ما الذي يوجد فيها؟</li></ul>
+ <h4>✏️ تعبير</h4><ul><li>صف مدرستك في 4 جمل</li></ul>`},
+
+{id:4,mat:'arabic',mrhla:'2',lv:'3',type:'درس',ic:'📖',icC:'ic-ar',
+ title:'النحو: الجملة الاسمية — المستوى الثالث',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م3'],week:'الأسبوع 3',
+ desc:'الجملة الاسمية: المبتدأ والخبر مع تمارين وفق التعليم الصريح.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_4/view',
+ body:`<h4>📖 المحتوى</h4><ul><li>المبتدأ: مرفوع — علامة الرفع الضمة</li><li>الخبر: مرفوع — علامة الرفع الضمة</li></ul>
+ <h4>💡 أمثلة</h4><ul><li>الأستاذُ مجتهدٌ</li><li>المدرسةُ جميلةٌ</li></ul>`},
+
+{id:5,mat:'arabic',mrhla:'2',lv:'4',type:'خريطة',ic:'🗺️',icC:'ic-ar',
+ title:'خريطة ذهنية: أقسام الكلام — المستوى الرابع',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م4'],week:'الأسبوع 4',
+ desc:'خريطة ذهنية: الاسم والفعل والحرف مع أمثلة جاهزة للطباعة.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_5/view',
+ body:`<h4>🗺️ الخريطة تشمل</h4><ul><li>الاسم: علاماته وأنواعه</li><li>الفعل: ماضٍ، مضارع، أمر</li><li>الحرف: حروف الجر والعطف</li></ul>`},
+
+{id:6,mat:'arabic',mrhla:'3',lv:'5',type:'درس',ic:'📖',icC:'ic-ar',
+ title:'التعبير الكتابي: كتابة فقرة — المستوى الخامس',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م5'],week:'الأسبوع 5',
+ desc:'كتابة فقرة منسجمة ذات بداية ووسط ونهاية وفق التعليم الصريح.',
+ free:true,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_6/view',
+ body:`<h4>📖 مراحل كتابة الفقرة</h4><ul><li>الجملة الرئيسية: الفكرة العامة</li><li>الجمل الداعمة: تفاصيل وأمثلة</li><li>الجملة الختامية: خلاصة</li></ul>`},
+
+{id:7,mat:'arabic',mrhla:'4',lv:'6',type:'درس',ic:'📖',icC:'ic-ar',
+ title:'الإعراب: الفعل والفاعل والمفعول — المستوى السادس',
+ tags:['tag-ar','tag-lv'],tagLabels:['العربية','م6'],week:'الأسبوع 6',
+ desc:'إعراب عناصر الجملة الفعلية مع نماذج مفصلة.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_7/view',
+ body:`<h4>💡 نموذج</h4><p>كتبَ الطالبُ الدرسَ</p><ul><li>كتبَ: فعل ماضٍ مبني على الفتح</li><li>الطالبُ: فاعل مرفوع بالضمة</li><li>الدرسَ: مفعول به منصوب بالفتحة</li></ul>`},
+
+{id:8,mat:'french',mrhla:'1',lv:'1',type:'درس',ic:'🇫🇷',icC:'ic-fr',
+ title:"Lecture: Ma famille — Niveau 1",
+ tags:['tag-fr','tag-lv'],tagLabels:['Français','N1'],week:'Semaine 1',
+ desc:"درس القراءة: نص الأسرة مع الفهم والتواصل الشفهي.",
+ free:true,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_8/view',
+ body:`<h4>📖 Texte</h4><p>"Je m'appelle Sara. Mon père s'appelle Ahmed. Ma mère s'appelle Fatima."</p>
+ <h4>❓ Compréhension</h4><ul><li>Comment s'appelle l'élève?</li><li>Comment s'appellent ses parents?</li></ul>
+ <h4>📝 Vocabulaire</h4><ul><li>père = أب / mère = أم</li></ul>`},
+
+{id:9,mat:'french',mrhla:'2',lv:'3',type:'درس',ic:'🇫🇷',icC:'ic-fr',
+ title:"Grammaire: Le présent de l'indicatif — N3",
+ tags:['tag-fr','tag-lv'],tagLabels:['Français','N3'],week:'Semaine 3',
+ desc:"تصريف أفعال المجموعة الأولى في الحاضر.",
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_9/view',
+ body:`<h4>📖 Terminaisons</h4><ul><li>Je: -e / Tu: -es / Il: -e</li><li>Nous: -ons / Vous: -ez / Ils: -ent</li></ul>
+ <h4>✏️ Exercice</h4><ul><li>Conjugue: ÉCRIRE, PARLER, CHANTER</li></ul>`},
+
+{id:10,mat:'french',mrhla:'3',lv:'5',type:'خريطة',ic:'🗺️',icC:'ic-fr',
+ title:"Carte mentale: Les temps — Niveau 5",
+ tags:['tag-fr','tag-lv'],tagLabels:['Français','N5'],week:'Semaine 5',
+ desc:"خريطة ذهنية للأزمنة الأربعة جاهزة للطباعة.",
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_10/view',
+ body:`<h4>🗺️ Les temps</h4><ul><li>Présent: Je mange</li><li>Passé composé: J'ai mangé</li><li>Imparfait: Je mangeais</li><li>Futur: Je mangerai</li></ul>`},
+
+{id:11,mat:'math',mrhla:'1',lv:'1',type:'درس',ic:'🔢',icC:'ic-ma',
+ title:'الأعداد من 0 إلى 20 — المستوى الأول',
+ tags:['tag-ma','tag-lv'],tagLabels:['الرياضيات','م1'],week:'الأسبوع 1',
+ desc:'قراءة وكتابة وترتيب الأعداد بخطوات التعليم الصريح.',
+ free:true,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_11/view',
+ body:`<h4>📖 خطوات التعليم الصريح</h4><ul><li>أنا أعرض (I Do): الأستاذ يشرح</li><li>نعمل معاً (We Do): تمرين جماعي</li><li>أنتم تمارسون (You Do): عمل فردي</li></ul>
+ <h4>✏️ تمارين</h4><ul><li>رتب: 12، 5، 18، 3</li><li>اكتب بالحروف: 15</li></ul>`},
+
+{id:12,mat:'math',mrhla:'1',lv:'2',type:'درس',ic:'🔢',icC:'ic-ma',
+ title:'الجمع والطرح في حدود 100 — المستوى الثاني',
+ tags:['tag-ma','tag-lv'],tagLabels:['الرياضيات','م2'],week:'الأسبوع 2',
+ desc:'الجمع والطرح بالاحتياط والاستلاف وفق التعليم الصريح.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_12/view',
+ body:`<h4>📖 مثال</h4><ul><li>47 + 35 = 82 (7+5=12 ← 2 واحتياط 1)</li></ul>
+ <h4>✏️ تمارين</h4><ul><li>56 + 37 = ___ (93)</li><li>84 - 46 = ___ (38)</li></ul>`},
+
+{id:13,mat:'math',mrhla:'2',lv:'3',type:'خريطة',ic:'🗺️',icC:'ic-ma',
+ title:'خريطة ذهنية: جدول الضرب — المستوى الثالث',
+ tags:['tag-ma','tag-lv'],tagLabels:['الرياضيات','م3'],week:'الأسبوع 3',
+ desc:'خريطة ملونة لجداول الضرب 1-10 جاهزة للطباعة.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_13/view',
+ body:`<h4>🗺️ المحتوى</h4><ul><li>جداول 1-10 بأشكال بصرية</li><li>تقنيات الحفظ السريع</li></ul>`},
+
+{id:14,mat:'math',mrhla:'3',lv:'5',type:'درس',ic:'🔢',icC:'ic-ma',
+ title:'النسبة المئوية — المستوى الخامس',
+ tags:['tag-ma','tag-lv'],tagLabels:['الرياضيات','م5'],week:'الأسبوع 5',
+ desc:'مفهوم النسبة المئوية وتطبيقاتها الحياتية.',
+ free:true,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_14/view',
+ body:`<h4>📖 القانون</h4><ul><li>النسبة = الجزء ÷ الكل × 100</li><li>30% من 500 = 150</li></ul>`},
+
+{id:15,mat:'doc',mrhla:'1',lv:'1',type:'وثيقة',ic:'📁',icC:'ic-doc',
+ title:'التوزيع السنوي — اللغة العربية — المستوى الأول',
+ tags:['tag-doc','tag-lv'],tagLabels:['وثيقة','م1'],week:'الموسم الدراسي',
+ desc:'التوزيع السنوي الرسمي للعربية للمستوى الأول وفق مناهج الريادة.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_15/view',
+ body:`<h4>📅 الهيكل</h4><ul><li>المرحلة 1: الوحدتان 1 و2</li><li>المرحلة 2: الوحدتان 3 و4</li><li>المرحلة 3: الوحدة 5</li><li>المرحلة 4: الوحدة 6</li></ul>`},
+
+{id:16,mat:'doc',mrhla:'2',lv:'3',type:'وثيقة',ic:'📁',icC:'ic-doc',
+ title:'دليل الأستاذ — التعليم الصريح — المستوى الثالث',
+ tags:['tag-doc','tag-lv'],tagLabels:['وثيقة','م3'],week:'الموسم الدراسي',
+ desc:'دليل شامل لتدريس المواد الثلاث بمنهجية التعليم الصريح.',
+ free:false,
+ driveLink:'https://drive.google.com/file/d/REPLACE_WITH_REAL_ID_16/view',
+ body:`<h4>📋 المحتوى</h4><ul><li>خطوات I Do / We Do / You Do</li><li>نماذج جذاذات الدروس</li><li>أدوات التقويم التكويني</li></ul>`},
+
+{id:17,mat:'video',mrhla:'1',lv:'1',type:'فيديو',ic:'🎥',icC:'ic-vid',
+ title:'فيديو: نموذج حصة قراءة — التعليم الصريح',
+ tags:['tag-vid','tag-lv'],tagLabels:['فيديو','م1'],week:'الأسبوع 1',
+ desc:'فيديو تعليمي يشرح آلية تدريس القراءة بمنهجية التعليم الصريح.',
+ free:true,
+ driveLink:'https://www.youtube.com/watch?v=REPLACE_WITH_YOUTUBE_ID',
+ body:`<h4>🎥 المحتوى</h4><ul><li>نموذج حصة قراءة كاملة</li><li>I Do — We Do — You Do</li><li>أدوات التقويم التكويني</li></ul>`},
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let cMat='all',cMrhla='all',cLv='all',cSearch='',page=1;
+const PER=8;
+let currentDL=null;
+let lvTimer=null;
+
+function filtered(){
+  return DATA.filter(x=>{
+    const m=cMat==='all'||x.mat===cMat;
+    const r=cMrhla==='all'||x.mrhla===cMrhla;
+    const l=cLv==='all'||x.lv===cLv;
+    const s=!cSearch||(x.title+x.desc).includes(cSearch);
+    return m&&r&&l&&s;
+  });
+}
+
+// ============================================================
+// FILTERS
+// ============================================================
+function doMarhala(btn,v){cMrhla=v;page=1;document.querySelectorAll('.mtab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
+function doLevel(btn,v){cLv=v;page=1;document.querySelectorAll('.lftag').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
+function navMat(a,m,e){if(e&&e.preventDefault)e.preventDefault();cMat=m;cMrhla='all';cLv='all';cSearch='';page=1;document.getElementById('si').value='';if(a){document.querySelectorAll('.nav-links a').forEach(x=>x.classList.remove('active'));a.classList.add('active');}document.querySelectorAll('.mtab').forEach(b=>{if(b.textContent.includes('كل'))b.classList.add('active');else b.classList.remove('active');});document.querySelectorAll('.lftag').forEach(b=>{if(b.textContent.includes('الكل'))b.classList.add('active');else b.classList.remove('active');});render();}
+function navAll(a,e){if(e&&e.preventDefault)e.preventDefault();cMat='all';cMrhla='all';cLv='all';cSearch='';page=1;if(a){document.querySelectorAll('.nav-links a').forEach(x=>x.classList.remove('active'));a.classList.add('active');}render();}
+function doSearch(){cSearch=document.getElementById('si').value.trim();page=1;render();}
+
+// ============================================================
+// RENDER
+// ============================================================
+function render(){
+  const f=filtered();const total=f.length;const pages=Math.ceil(total/PER);
+  const items=f.slice((page-1)*PER,page*PER);
+  document.getElementById('rc').textContent=`عرض ${total} مورد تعليمي`;
+  const grid=document.getElementById('grid');
+  if(!items.length){grid.innerHTML=`<div class="empty"><span class="empty-ic">🔍</span><p>لا توجد نتائج</p></div>`;document.getElementById('pag').innerHTML='';return;}
+  grid.innerHTML=items.map(x=>`
+    <div class="rcard" onclick="openMo(${x.id})">
+      <div class="rcard-top">
+        <span class="rcard-badge ${x.free?'badge-free':'badge-paid'}">${x.free?'✅ مجاني':'🔗 Linkvertise'}</span>
+        <div class="rcard-ic ${x.icC}">${x.ic}</div>
+        <div class="rcard-info">
+          <div class="rcard-title">${x.title}</div>
+          <div class="rcard-tags">${x.tags.map((t,i)=>`<span class="rtag ${t}">${x.tagLabels[i]}</span>`).join('')}</div>
+          <div class="rcard-desc">${x.desc}</div>
+        </div>
+      </div>
+      <div class="rcard-bot">
+        <span class="rcard-week">📅 ${x.week}</span>
+        <div class="rcard-btns">
+          <button class="rbtn rbtn-view" onclick="event.stopPropagation();openMo(${x.id})">👁 عرض</button>
+          <button class="rbtn rbtn-dl" onclick="event.stopPropagation();prepDL(${x.id})">${x.free?'📥 تحميل':'🔗 تحميل'}</button>
+        </div>
+      </div>
+    </div>`).join('');
+  const pag=document.getElementById('pag');
+  if(pages<=1){pag.innerHTML='';return;}
+  let h='';
+  if(page>1)h+=`<button class="pbtn" onclick="goP(${page-1})">→</button>`;
+  for(let i=1;i<=pages;i++)h+=`<button class="pbtn${i===page?' active':''}" onclick="goP(${i})">${i}</button>`;
+  if(page<pages)h+=`<button class="pbtn" onclick="goP(${page+1})">←</button>`;
+  pag.innerHTML=h;
+}
+function goP(n){page=n;render();document.getElementById('content').scrollIntoView({behavior:'smooth'});}
+
+// ============================================================
+// CONTENT MODAL
+// ============================================================
+function openMo(id){
+  const x=DATA.find(d=>d.id===id);if(!x)return;
+  currentDL=x;
+  document.getElementById('m-ic').textContent=x.ic;
+  document.getElementById('m-title').textContent=x.title;
+  document.getElementById('m-tags').innerHTML=x.tags.map((t,i)=>`<span class="rtag ${t}" style="font-size:12px;padding:4px 12px;">${x.tagLabels[i]}</span>`).join('');
+  document.getElementById('m-body').innerHTML=x.body;
+  const dlBtn=document.getElementById('m-dl-btn');
+  if(x.free){
+    dlBtn.textContent='📥 تحميل مجاني مباشر';
+    dlBtn.onclick=()=>window.open(x.driveLink,'_blank');
+  } else {
+    dlBtn.textContent='🔗 تحميل عبر Linkvertise';
+    dlBtn.onclick=startLV;
+  }
+  document.getElementById('mo').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeMo(){document.getElementById('mo').classList.remove('open');document.body.style.overflow='';}
+
+// ============================================================
+// LINKVERTISE SYSTEM
+// ============================================================
+function prepDL(id){
+  const x=DATA.find(d=>d.id===id);if(!x)return;
+  currentDL=x;
+  if(x.free){window.open(x.driveLink,'_blank');return;}
+  startLV();
+}
+
+function startLV(){
+  if(!currentDL)return;
+  closeMo();
+  document.getElementById('lv-title').textContent='تحميل: '+currentDL.title;
+  document.getElementById('lv-timer').textContent='5';
+  document.getElementById('lv-bar').style.width='0%';
+  document.getElementById('lv-btn').disabled=true;
+  document.getElementById('lv-btn').textContent='⏳ انتظر...';
+  document.getElementById('lv-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  let secs=5;
+  if(lvTimer)clearInterval(lvTimer);
+  lvTimer=setInterval(()=>{
+    secs--;
+    document.getElementById('lv-timer').textContent=secs;
+    document.getElementById('lv-bar').style.width=((5-secs)/5*100)+'%';
+    if(secs<=0){
+      clearInterval(lvTimer);
+      document.getElementById('lv-btn').disabled=false;
+      document.getElementById('lv-btn').textContent='✅ تحميل الملف الآن!';
+    }
+  },1000);
+}
+
+function goLinkvertise(){
+  if(!currentDL)return;
+  // ⚠️ استبدل YOUR_LINKVERTISE_ID بمعرفك الحقيقي من linkvertise.com
+  // الرابط الحقيقي يكون: https://linkvertise.com/YOUR_ID/resource-name
+  // مثال: https://linkvertise.com/123456/arabic-lesson-1
+  const lvUrl=`https://linkvertise.com/${CONFIG.LINKVERTISE_ID}/download?o=sharing&r=${encodeURIComponent(currentDL.driveLink)}`;
+  window.open(lvUrl,'_blank');
+  closeLV();
+}
+
+function closeLV(){
+  document.getElementById('lv-overlay').classList.remove('open');
+  document.body.style.overflow='';
+  if(lvTimer)clearInterval(lvTimer);
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMo();closeLV();}});
+
+// ============================================================
+// INIT
+// ============================================================
+document.getElementById('tc').textContent=DATA.length;
+document.getElementById('c-ar').textContent=DATA.filter(x=>x.mat==='arabic').length+' مورد';
+document.getElementById('c-fr').textContent=DATA.filter(x=>x.mat==='french').length+' مورد';
+document.getElementById('c-ma').textContent=DATA.filter(x=>x.mat==='math').length+' مورد';
+document.getElementById('c-doc').textContent=DATA.filter(x=>x.mat==='doc').length+' مورد';
+render();
+</script>
+</body>
+</html>
