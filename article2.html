@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التربية الدامجة — مدونة الريادة التربوية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="article1.html">
+<style>
+:root{--primary:#1a5276;--primary-l:#2471a3;--primary-d:#0d3349;--green:#1e8449;--gold:#d4ac0d;--gold-l:#f1c40f;--bg:#f0f4f8;--white:#fff;--text:#1a2530;--text-l:#5d6d7e;--border:#d5e8f5;--radius:16px;--sh:0 4px 24px rgba(26,82,118,.10);}
+*{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);}
+.switcher{background:var(--gold-l);display:flex;align-items:center;justify-content:center;gap:12px;padding:9px 20px;font-size:13px;font-weight:700;color:#1a2530;flex-wrap:wrap;border-bottom:2px solid var(--gold);}
+.sw-btn{padding:5px 16px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:800;display:inline-flex;align-items:center;gap:5px;}
+.sw-green{background:var(--green);color:#fff;}.sw-blue{background:var(--primary);color:#fff;}
+.topbar{background:var(--primary-d);color:rgba(255,255,255,.8);font-size:12px;padding:7px 40px;display:flex;justify-content:space-between;border-bottom:2px solid var(--gold);}
+.topbar a{color:rgba(255,255,255,.7);text-decoration:none;margin-left:16px;}.topbar a:hover{color:var(--gold-l);}
+nav{background:var(--white);border-bottom:3px solid var(--green);position:sticky;top:0;z-index:100;box-shadow:0 3px 14px rgba(0,0,0,.07);}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;gap:14px;}
+.nav-links{display:flex;overflow-x:auto;}
+.nav-links a{padding:13px 15px;text-decoration:none;color:var(--text-l);font-size:13px;font-weight:700;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;}
+.nav-links a:hover{color:var(--green);border-bottom-color:var(--green);}
+.nav-home-btn{background:var(--green);color:#fff;padding:7px 16px;border-radius:20px;text-decoration:none;font-size:13px;font-weight:800;white-space:nowrap;}
+.art-wrap{max-width:1200px;margin:0 auto;padding:36px 40px;}
+.art-layout{display:flex;gap:28px;align-items:flex-start;}
+.art-main{flex:1;min-width:0;}
+.art-sidebar{width:300px;flex-shrink:0;position:sticky;top:80px;}
+.art-hero{background:linear-gradient(135deg,#145a32,#1e8449);border-radius:20px;padding:40px;color:#fff;margin-bottom:30px;position:relative;overflow:hidden;}
+.art-hero::after{content:'♿';position:absolute;right:30px;bottom:-10px;font-size:100px;opacity:.1;}
+.art-breadcrumb{font-size:12px;opacity:.75;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.art-breadcrumb a{color:rgba(255,255,255,.75);text-decoration:none;}
+.art-cat-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(241,196,15,.25);border:1px solid rgba(241,196,15,.45);color:var(--gold-l);padding:4px 13px;border-radius:20px;font-size:11.5px;font-weight:800;margin-bottom:14px;}
+.art-hero-title{font-family:'Amiri',serif;font-size:34px;line-height:1.35;margin-bottom:14px;}
+.art-hero-meta{display:flex;gap:18px;font-size:12.5px;opacity:.82;flex-wrap:wrap;}
+.ad-box{background:#fff8f0;border:2px dashed #ffe0b2;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:11.5px;margin-bottom:24px;position:relative;}
+.ad-box::before{content:'إعلان';position:absolute;top:5px;right:10px;font-size:10px;color:#ddd;}
+.ad-top{height:90px;width:100%;}.ad-mid{height:90px;width:100%;}.ad-side{height:250px;width:100%;margin-bottom:18px;}
+.art-body{background:var(--white);border-radius:var(--radius);padding:36px 40px;box-shadow:var(--sh);margin-bottom:24px;font-size:15px;line-height:2.1;color:var(--text);}
+.art-body h2{font-family:'Amiri',serif;font-size:26px;color:#145a32;margin:28px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--border);}
+.art-body h3{font-size:18px;color:var(--green);margin:20px 0 10px;font-weight:800;}
+.art-body p{margin-bottom:16px;}.art-body ul,.art-body ol{padding-right:22px;margin-bottom:16px;}.art-body li{margin-bottom:8px;}
+.highlight{background:linear-gradient(135deg,#eafaf1,#f0faf5);border-right:5px solid var(--green);padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0;font-size:14.5px;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0;}
+.stat-box{background:var(--green);color:#fff;border-radius:12px;padding:18px 14px;text-align:center;}
+.stat-box b{display:block;font-size:28px;color:var(--gold-l);}.stat-box span{font-size:12px;opacity:.85;}
+.quote-box{background:#145a32;color:#fff;border-radius:14px;padding:22px 26px;margin:22px 0;font-family:'Amiri',serif;font-size:18px;line-height:1.8;position:relative;}
+.quote-box::before{content:'❝';font-size:48px;opacity:.2;position:absolute;top:10px;right:16px;}
+.art-footer{background:var(--white);border-radius:var(--radius);padding:22px 28px;box-shadow:var(--sh);margin-bottom:28px;}
+.art-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.art-tag{padding:5px 14px;border-radius:18px;background:#eafaf1;color:#145a32;font-size:12px;font-weight:700;border:1.5px solid #d0e8dd;}
+.share-row{display:flex;gap:10px;flex-wrap:wrap;}
+.share-btn{padding:9px 20px;border-radius:10px;border:none;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:7px;}
+.sb-fb{background:#1877f2;color:#fff;}.sb-wa{background:#25d366;color:#fff;}.sb-tw{background:#1da1f2;color:#fff;}.sb-cp{background:#f0f6fb;color:var(--primary);border:1.5px solid var(--border);}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:30px;}
+.rel-card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--sh);cursor:pointer;transition:transform .2s;text-decoration:none;display:block;}
+.rel-card:hover{transform:translateY(-3px);}
+.rel-img{height:100px;display:flex;align-items:center;justify-content:center;font-size:44px;}
+.rel-body{padding:14px 16px;}.rel-cat{font-size:10.5px;font-weight:800;color:var(--green);margin-bottom:5px;}.rel-title{font-size:13px;font-weight:800;color:var(--text);line-height:1.45;}
+.widget{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sh);margin-bottom:18px;}
+.w-hdr{background:var(--green);color:#fff;padding:11px 16px;font-size:13.5px;font-weight:800;}
+.w-body{padding:14px 16px;}
+.w-link{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);transition:color .2s;}
+.w-link:last-child{border-bottom:none;}.w-link:hover{color:var(--green);}
+.w-link-ic{width:32px;height:32px;background:#eafaf1;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.w-link-t{font-size:12.5px;font-weight:700;}.w-link-s{font-size:11px;color:var(--text-l);}
+footer{background:var(--primary-d);color:#fff;padding:36px 40px 18px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:28px;}
+.fb-t{font-family:'Amiri',serif;font-size:21px;color:var(--gold-l);display:block;margin-bottom:8px;}.fb-d{font-size:12.5px;opacity:.7;line-height:1.85;}
+.fc h4{font-size:13px;font-weight:800;color:var(--gold-l);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.13);}
+.fc ul{list-style:none;}.fc ul li a{color:rgba(255,255,255,.7);text-decoration:none;font-size:12.5px;display:block;padding:4px 0;}.fc ul li a:hover{color:#fff;}
+.fbot{border-top:1px solid rgba(255,255,255,.12);padding-top:14px;display:flex;justify-content:space-between;font-size:12px;opacity:.6;flex-wrap:wrap;gap:6px;}
+.fab{position:fixed;bottom:22px;left:22px;width:48px;height:48px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 5px 16px rgba(30,132,73,.4);cursor:pointer;z-index:200;border:none;color:#fff;transition:transform .2s;}
+.fab:hover{transform:scale(1.1);}
+@media(max-width:950px){.art-sidebar{display:none;}.stat-row{grid-template-columns:1fr 1fr;}.related-grid{grid-template-columns:1fr;}.fg{grid-template-columns:1fr;}}
+@media(max-width:640px){.art-wrap{padding:20px 14px;}.art-body{padding:22px 18px;}.art-hero{padding:24px 18px;}.art-hero-title{font-size:24px;}.topbar{display:none;}.nav-inner{padding:0 10px;}.stat-row{grid-template-columns:1fr;} footer{padding:24px 16px 14px;}}
+</style>
+</head>
+<body>
+<div class="switcher"><span>🌐 تصفح مواقعنا:</span><a class="sw-btn sw-green" href="index.html">🏫 بوابة الموارد التعليمية</a><a class="sw-btn sw-blue" href="blog.html">📰 مدونة الريادة التربوية</a></div>
+<div class="topbar"><div><a href="blog.html">🏠 المدونة</a><a href="https://www.men.gov.ma" target="_blank">🏛️ وزارة التربية</a></div><div>🇲🇦 المملكة المغربية</div></div>
+<nav><div class="nav-inner"><div class="nav-links"><a href="article1.html">علوم التربية</a><a href="article2.html" style="color:var(--green);border-bottom:3px solid var(--green);">التربية الدامجة</a><a href="article3.html">المدرسة الرائدة</a><a href="article4.html">التوجيه</a><a href="article5.html">الإدارة</a><a href="article6.html">اعداديات الريادة</a><a href="article7.html">الإصلاح</a><a href="article8.html">العنف</a><a href="article9.html">خارطة الطريق</a><a href="article10.html">لغات التدريس</a></div><a class="nav-home-btn" href="blog.html">← المدونة</a></div></nav>
+<div class="art-wrap"><div class="art-layout"><div class="art-main">
+<div class="ad-box ad-top">📢 مساحة إعلانية — Google AdSense (728×90)</div>
+<div class="art-hero">
+  <div class="art-breadcrumb"><a href="blog.html">المدونة</a> ← المقال</div>
+  <div class="art-cat-badge">♿ التربية الدامجة</div>
+  <div class="art-hero-title">التربية الدامجة في المغرب: نحو مدرسة للجميع بلا استثناء</div>
+  <div class="art-hero-meta"><span>✍️ فريق التحرير</span><span>📅 ماي 2025</span><span>⏱️ 10 دقائق</span><span>👁️ 2.8k</span></div>
+</div>
+<div class="art-body">
+  <p>التربية الدامجة (Inclusive Education) هي فلسفة تربوية ونهج بيداغوجي يرمي إلى ضمان حق كل طفل في التعليم داخل الفصل الدراسي العادي، بصرف النظر عن قدراته الجسدية أو الذهنية أو اجتماعية وضعيته.</p>
+  <h2>📌 المفهوم والمرجعيات</h2>
+  <p>تستند التربية الدامجة إلى جملة من الوثائق الدولية الكبرى، في مقدمتها <strong>إعلان سالامانكا (1994)</strong> الذي أقرّ بحق الأطفال ذوي الإعاقات في التعليم في المدارس العادية. كما تستند إلى <strong>اتفاقية الأمم المتحدة لحقوق الأشخاص ذوي الإعاقة (2006)</strong> وعلى المستوى الوطني إلى <strong>الميثاق الوطني للتربية والتكوين</strong> والقانون الإطار 51.17.</p>
+  <div class="stat-row">
+    <div class="stat-box"><b>660K</b><span>طفل ذو إعاقة بالمغرب</span></div>
+    <div class="stat-box"><b>40%</b><span>فقط في المدارس</span></div>
+    <div class="stat-box"><b>2030</b><span>هدف التعميم</span></div>
+  </div>
+  <h2>🎯 مبادئ التربية الدامجة</h2>
+  <ul>
+    <li><strong>مبدأ الشمولية:</strong> المدرسة لكل الأطفال دون استثناء</li>
+    <li><strong>مبدأ التكيف:</strong> البيئة تتكيف مع المتعلم وليس العكس</li>
+    <li><strong>مبدأ التشارك:</strong> الجميع مسؤول — أستاذ، أسرة، مجتمع</li>
+    <li><strong>مبدأ الدعم الفردي:</strong> لكل متعلم خطة بيداغوجية فردية (PPE)</li>
+  </ul>
+  <h2>🏫 واقع التربية الدامجة في المغرب</h2>
+  <p>انخرط المغرب في مسار التربية الدامجة منذ سنوات، غير أن التحديات لا تزال كثيرة. فعلى الرغم من توفر الإطار القانوني والمؤسسي، يبقى تطبيق الإدماج الفعلي محدوداً بسبب:</p>
+  <ul>
+    <li>شُح التكوين المتخصص لدى الأساتذة في التعامل مع ذوي الاحتياجات الخاصة</li>
+    <li>غياب البنية التحتية المُكيَّفة في كثير من المؤسسات</li>
+    <li>نقص الأطر المتخصصة: معلمو الدعم، المعالجون النفسيون، المختصون في التخاطب</li>
+    <li>الصورة النمطية الاجتماعية السلبية</li>
+  </ul>
+  <div class="highlight">💡 التربية الدامجة لا تعني وضع الطفل ذي الإعاقة داخل الفصل العادي فحسب، بل تهيئة كل الشروط البيداغوجية والبيئية لضمان تعلمه الفعلي.</div>
+  <h2>🛠️ أدوات الدعم البيداغوجي</h2>
+  <h3>الخطة التربوية الفردية (PPE)</h3>
+  <p>وثيقة تُحدد الأهداف التعليمية الخاصة بكل متعلم ذي حاجة خاصة، وطرق الدعم، والوسائل المكيّفة، والتقويم الملائم. تُعدّ بمشاركة الأستاذ، والمدير، والأخصائي النفسي، وولي الأمر.</p>
+  <h3>بيداغوجيا الفارقية</h3>
+  <p>تكييف الأنشطة والمحتوى والتقييم مع خصائص كل متعلم، وهو ما تشجع عليه مناهج المدرسة الرائدة.</p>
+  <div class="quote-box">"مدرسة للجميع تعني أن نُقدّر الاختلاف ونبني عليه لا أن نُقصيه." — اليونسكو</div>
+  <h2>🌍 تجارب دولية ملهمة</h2>
+  <ul>
+    <li><strong>فنلندا:</strong> نموذج الدعم التدريجي ذو المستويات الثلاثة</li>
+    <li><strong>كندا:</strong> برامج التعليم الفردي والتكنولوجيا المساعدة</li>
+    <li><strong>الأردن:</strong> نموذج الغرف المصادر في المدارس العادية</li>
+  </ul>
+  <h2>✅ التوصيات</h2>
+  <ul>
+    <li>تكوين جميع الأساتذة على مبادئ التربية الدامجة وأدواتها</li>
+    <li>توفير أخصائيين نفسيين في كل مؤسسة تعليمية</li>
+    <li>مراجعة البنية التحتية لضمان الولوجية</li>
+    <li>إشراك الأسر والمجتمع في مسار الإدماج</li>
+  </ul>
+</div>
+<div class="ad-box ad-mid">📢 مساحة إعلانية — Google AdSense</div>
+<div class="art-footer">
+  <div class="art-tags"><span class="art-tag">#التربية_الدامجة</span><span class="art-tag">#ذوو_الإعاقة</span><span class="art-tag">#المدرسة_الشاملة</span><span class="art-tag">#المغرب</span><span class="art-tag">#إدماج</span></div>
+  <div class="share-row"><span style="font-size:13px;font-weight:700;color:var(--text-l);">شارك:</span><button class="share-btn sb-fb" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href))">📘 فيسبوك</button><button class="share-btn sb-wa" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href))">💬 واتساب</button><button class="share-btn sb-cp" onclick="navigator.clipboard.writeText(location.href).then(()=>alert('✅ تم نسخ الرابط!'))">🔗 نسخ</button></div>
+</div>
+<h3 style="font-family:'Amiri',serif;font-size:24px;color:#145a32;margin-bottom:18px;">📖 مقالات ذات صلة</h3>
+<div class="related-grid">
+  <a class="rel-card" href="article1.html"><div class="rel-img" style="background:linear-gradient(135deg,#1a5276,#2471a3);">🎓</div><div class="rel-body"><div class="rel-cat">علوم التربية</div><div class="rel-title">علوم التربية: نظريات التعلم الكبرى</div></div></a>
+  <a class="rel-card" href="article8.html"><div class="rel-img" style="background:linear-gradient(135deg,#922b21,#c0392b);">🛡️</div><div class="rel-body"><div class="rel-cat">العنف المدرسي</div><div class="rel-title">العنف المدرسي: الأسباب والحلول</div></div></a>
+  <a class="rel-card" href="article3.html"><div class="rel-img" style="background:linear-gradient(135deg,#1a5276,#2471a3);">🏫</div><div class="rel-body"><div class="rel-cat">المدرسة الرائدة</div><div class="rel-title">المدرسة الرائدة: نموذج تربوي جديد</div></div></a>
+  <a class="rel-card" href="article7.html"><div class="rel-img" style="background:linear-gradient(135deg,#784212,#e67e22);">📜</div><div class="rel-body"><div class="rel-cat">إصلاح المدرسة</div><div class="rel-title">إصلاح المدرسة المغربية</div></div></a>
+</div>
+</div>
+<div class="art-sidebar">
+  <div class="ad-box ad-side">📢 إعلان جانبي (300×250)</div>
+  <div class="widget"><div class="w-hdr">📂 تصفح المقالات</div><div class="w-body">
+    <a class="w-link" href="article1.html"><div class="w-link-ic">🎓</div><div><div class="w-link-t">علوم التربية</div><div class="w-link-s">نظريات التعلم</div></div></a>
+    <a class="w-link" href="article2.html"><div class="w-link-ic">♿</div><div><div class="w-link-t">التربية الدامجة</div><div class="w-link-s">مدرسة للجميع</div></div></a>
+    <a class="w-link" href="article3.html"><div class="w-link-ic">🏫</div><div><div class="w-link-t">المدرسة الرائدة</div><div class="w-link-s">النموذج الجديد</div></div></a>
+    <a class="w-link" href="article4.html"><div class="w-link-ic">🧭</div><div><div class="w-link-t">التوجيه التربوي</div><div class="w-link-s">مسار الطالب</div></div></a>
+    <a class="w-link" href="article5.html"><div class="w-link-ic">🏛️</div><div><div class="w-link-t">الإدارة التربوية</div><div class="w-link-s">قيادة المؤسسة</div></div></a>
+    <a class="w-link" href="article6.html"><div class="w-link-ic">🏗️</div><div><div class="w-link-t">اعداديات الريادة</div><div class="w-link-s">التوسع</div></div></a>
+    <a class="w-link" href="article7.html"><div class="w-link-ic">📜</div><div><div class="w-link-t">إصلاح المدرسة</div><div class="w-link-s">المسار</div></div></a>
+    <a class="w-link" href="article8.html"><div class="w-link-ic">🛡️</div><div><div class="w-link-t">العنف المدرسي</div><div class="w-link-s">الأسباب والحلول</div></div></a>
+    <a class="w-link" href="article9.html"><div class="w-link-ic">🗺️</div><div><div class="w-link-t">خارطة الطريق</div><div class="w-link-s">2022-2026</div></div></a>
+    <a class="w-link" href="article10.html"><div class="w-link-ic">🗣️</div><div><div class="w-link-t">لغات التدريس</div><div class="w-link-s">الجدل اللغوي</div></div></a>
+  </div></div>
+</div>
+</div></div>
+<footer><div class="footer-inner"><div class="fg"><div><span class="fb-t">📰 مدونة الريادة التربوية</span><p class="fb-d">مقالات وتحليلات حول التعليم المغربي.</p></div><div class="fc"><h4>المقالات</h4><ul><li><a href="article1.html">علوم التربية</a></li><li><a href="article2.html">التربية الدامجة</a></li><li><a href="article3.html">المدرسة الرائدة</a></li><li><a href="article4.html">التوجيه التربوي</a></li><li><a href="article5.html">الإدارة التربوية</a></li></ul></div><div class="fc"><h4>مواقعنا</h4><ul><li><a href="blog.html">📰 المدونة</a></li><li><a href="index.html">🏫 بوابة الموارد</a></li></ul></div></div><div class="fbot"><span>© 2025 مدونة الريادة التربوية</span><span>🇲🇦 بـ ❤️ للتعليم</span></div></div></footer>
+<button class="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+</body></html>
