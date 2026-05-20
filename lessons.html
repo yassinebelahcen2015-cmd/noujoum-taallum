@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="تحميل دروس المدرسة الرائدة بصيغة PPT وPDF لجميع المستويات والمواد — التعليم الصريح 2025-2026">
+<meta name="keywords" content="دروس المدرسة الرائدة PPT, التعليم الصريح, تحميل حصص, مستوى أول ثاني ثالث رابع خامس سادس">
+<title>دروس المدرسة الرائدة PPT — تحميل حصص التعليم الصريح</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     Google AdSense — أضف الكود هنا بعد الموافقة
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+     ============================================================ -->
+
+<style>
+:root{
+  --primary:#1a5276;--primary-l:#2471a3;--primary-d:#0d3349;
+  --green:#1e8449;--green-l:#27ae60;--green-d:#145a32;
+  --gold:#d4ac0d;--gold-l:#f1c40f;--gold-bg:#fef9e7;
+  --red:#c0392b;--orange:#e67e22;--purple:#7d3c98;
+  --ppt:#c0392b; /* PPT red */
+  --pdf:#1e8449; /* PDF green */
+  --bg:#f0f4f8;--white:#fff;--text:#1a2530;--text-l:#5d6d7e;
+  --border:#d5e8f5;--radius:14px;
+  --sh:0 4px 20px rgba(26,82,118,.09);
+  --sh-lg:0 10px 36px rgba(26,82,118,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* SWITCHER */
+.switcher{background:var(--gold-l);display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 20px;font-size:13px;font-weight:700;color:#1a2530;flex-wrap:wrap;border-bottom:2px solid var(--gold);}
+.sw-btn{padding:5px 14px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:800;display:inline-flex;align-items:center;gap:5px;}
+.sw-green{background:var(--green);color:#fff;}.sw-blue{background:var(--primary);color:#fff;}.sw-red{background:var(--red);color:#fff;}
+
+/* TOPBAR */
+.topbar{background:var(--primary-d);color:rgba(255,255,255,.8);font-size:12px;padding:7px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--gold);}
+.topbar a{color:rgba(255,255,255,.7);text-decoration:none;margin-left:16px;transition:color .2s;}
+.topbar a:hover{color:var(--gold-l);}
+
+/* HEADER */
+header{background:linear-gradient(150deg,var(--primary-d) 0%,var(--primary) 50%,#c0392b 100%);color:#fff;position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hdr-inner{max-width:1300px;margin:0 auto;padding:28px 40px;display:flex;align-items:center;gap:22px;position:relative;z-index:2;flex-wrap:wrap;}
+.hdr-logo{width:84px;height:84px;background:linear-gradient(135deg,var(--gold),var(--gold-l));border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:0 6px 24px rgba(0,0,0,.25);flex-shrink:0;animation:fl 3s ease-in-out infinite;}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.hdr-text{flex:1;}
+.hdr-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(212,172,13,.2);border:1px solid rgba(212,172,13,.4);color:var(--gold-l);padding:4px 13px;border-radius:20px;font-size:11.5px;font-weight:800;margin-bottom:10px;}
+.hdr-title{font-family:'Amiri',serif;font-size:38px;font-weight:700;line-height:1.15;}
+.hdr-sub{font-size:14px;opacity:.85;margin-top:6px;line-height:1.6;}
+.hdr-badges{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+.hbadge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);padding:5px 13px;border-radius:10px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px;}
+.hdr-stats{display:flex;flex-direction:column;gap:9px;flex-shrink:0;}
+.hstat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:11px 18px;text-align:center;color:#fff;min-width:90px;}
+.hstat b{display:block;font-size:23px;color:var(--gold-l);line-height:1;}
+.hstat span{font-size:11px;opacity:.75;margin-top:3px;display:block;}
+
+/* AD */
+.ad-space{background:#fff8f0;border:2px dashed #ffe0b2;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:11px;position:relative;}
+.ad-space::before{content:'إعلان';position:absolute;top:4px;right:10px;font-size:10px;color:#ddd;}
+.ad-banner{width:100%;height:90px;margin-bottom:26px;}
+.ad-mid{width:100%;height:90px;margin:24px 0;}
+.ad-side{width:100%;min-height:250px;margin-bottom:18px;}
+
+/* NAV */
+nav{background:var(--white);border-bottom:3px solid var(--primary);position:sticky;top:0;z-index:200;box-shadow:0 3px 14px rgba(0,0,0,.07);}
+.nav-wrap{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.nav-links{display:flex;overflow-x:auto;}
+.nav-links a{display:flex;align-items:center;gap:6px;padding:13px 14px;text-decoration:none;color:var(--text-l);font-size:13px;font-weight:700;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;}
+.nav-links a:hover,.nav-links a.act{color:var(--primary);border-bottom-color:var(--primary);background:#f0f6fb;}
+.nav-links a.act-red{color:var(--red);border-bottom-color:var(--red);}
+.nav-search{display:flex;gap:7px;}
+.nav-search input{padding:7px 14px;border-radius:18px;border:2px solid var(--border);font-family:'Tajawal',sans-serif;font-size:13px;outline:none;width:170px;text-align:right;}
+.nav-search input:focus{border-color:var(--primary);}
+.nav-search button{padding:7px 14px;background:var(--primary);color:#fff;border:none;border-radius:18px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+/* ANNOUNCE */
+.announce{background:linear-gradient(90deg,var(--red),#e74c3c);color:#fff;text-align:center;padding:10px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
+.announce a{color:var(--gold-l);text-decoration:underline;}
+
+/* MAIN */
+main{max-width:1300px;margin:0 auto;padding:34px 40px;}
+.page-layout{display:flex;gap:24px;align-items:flex-start;}
+.main-col{flex:1;min-width:0;}
+.side-col{width:305px;flex-shrink:0;position:sticky;top:80px;}
+
+/* SEC HDR */
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-line{flex:1;height:2px;background:linear-gradient(90deg,var(--primary),transparent);}
+.sec-line.r{background:linear-gradient(270deg,var(--primary),transparent);}
+.sec-title{font-family:'Amiri',serif;font-size:25px;color:var(--primary-d);white-space:nowrap;}
+
+/* FILTER PANEL */
+.filter-panel{background:var(--white);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--sh);margin-bottom:22px;border:1.5px solid var(--border);}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+.filter-row:last-child{margin-bottom:0;}
+.filter-label{font-size:13px;font-weight:800;color:var(--primary-d);white-space:nowrap;min-width:70px;}
+.ftag{padding:6px 14px;border-radius:18px;border:2px solid var(--border);background:var(--white);font-family:'Tajawal',sans-serif;font-size:12.5px;font-weight:700;cursor:pointer;color:var(--text-l);transition:all .2s;}
+.ftag:hover{background:#f0f6fb;border-color:var(--primary-l);}
+.ftag.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+.ftag.active-green{background:var(--green);color:#fff;border-color:var(--green);}
+.ftag.active-red{background:var(--red);color:#fff;border-color:var(--red);}
+.ftag.active-gold{background:var(--gold);color:#333;border-color:var(--gold);}
+.ftag.active-purple{background:var(--purple);color:#fff;border-color:var(--purple);}
+
+/* RESULTS INFO */
+.results-info{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;}
+.results-count{font-size:13px;color:var(--text-l);font-weight:600;}
+.view-toggle{display:flex;gap:6px;}
+.vtbtn{padding:6px 12px;border-radius:8px;border:2px solid var(--border);background:var(--white);font-family:'Tajawal',sans-serif;font-size:12px;cursor:pointer;transition:all .2s;}
+.vtbtn.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+/* LESSONS GRID */
+.lessons-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px;}
+.lessons-grid.list-view{grid-template-columns:1fr;}
+
+/* LESSON CARD */
+.lcard{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--border);transition:all .22s;position:relative;}
+.lcard:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:var(--primary-l);}
+.lcard-header{padding:14px 16px 12px;display:flex;gap:12px;align-items:flex-start;}
+.lcard-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.li-ar{background:#eaf4fb;}.li-fr{background:#eafaf1;}.li-ma{background:#fef9e7;}
+.lcard-info{flex:1;min-width:0;}
+.lcard-title{font-size:13.5px;font-weight:800;color:var(--text);line-height:1.4;margin-bottom:6px;}
+.lcard-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:5px;}
+.ltag{padding:2px 9px;border-radius:7px;font-size:10px;font-weight:800;color:#fff;}
+.ltag-ar{background:#2471a3;}.ltag-fr{background:#1e8449;}.ltag-ma{background:#c8960c;}
+.ltag-lv{background:var(--text-l);}.ltag-week{background:var(--purple);}
+.ltag-mrhla{background:var(--orange);}
+.ltag-ppt{background:var(--ppt);}.ltag-pdf{background:var(--pdf);}
+.lcard-desc{font-size:11.5px;color:var(--text-l);line-height:1.6;}
+/* BADGE */
+.lcard-badge{position:absolute;top:10px;left:10px;padding:3px 10px;border-radius:7px;font-size:10px;font-weight:800;}
+.badge-ppt{background:#fdecea;color:var(--ppt);}
+.badge-pdf{background:#eafaf1;color:var(--pdf);}
+.badge-both{background:var(--gold-bg);color:#856404;}
+/* FOOTER */
+.lcard-footer{padding:10px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:#f8fbfd;}
+.lcard-meta{font-size:11px;color:var(--text-l);display:flex;align-items:center;gap:8px;}
+.lcard-btns{display:flex;gap:6px;}
+.lbtn{padding:6px 13px;border:none;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:11.5px;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:4px;}
+.lbtn-ppt{background:linear-gradient(135deg,var(--ppt),#e74c3c);color:#fff;}
+.lbtn-ppt:hover{background:var(--red);transform:translateY(-1px);}
+.lbtn-pdf{background:linear-gradient(135deg,var(--green),var(--green-l));color:#fff;}
+.lbtn-pdf:hover{background:var(--green-d);transform:translateY(-1px);}
+.lbtn-info{background:#eaf4fb;color:var(--primary);}
+.lbtn-info:hover{background:var(--primary);color:#fff;}
+
+/* EMPTY */
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-l);}
+.empty-ic{font-size:56px;display:block;margin-bottom:14px;}
+
+/* PAGINATION */
+.pag{display:flex;gap:7px;justify-content:center;margin-bottom:26px;flex-wrap:wrap;}
+.pbtn{width:36px;height:36px;border-radius:9px;border:2px solid var(--border);background:var(--white);font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.pbtn:hover,.pbtn.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+/* LINKVERTISE MODAL */
+.lv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;align-items:center;justify-content:center;padding:20px;}
+.lv-overlay.open{display:flex;}
+.lv-box{background:var(--white);border-radius:20px;padding:30px;max-width:460px;width:100%;text-align:center;animation:mIn .25s ease;}
+@keyframes mIn{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+.lv-ic{font-size:52px;display:block;margin-bottom:12px;}
+.lv-file-name{background:#f0f6fb;border-radius:10px;padding:10px 16px;font-size:13px;font-weight:700;color:var(--primary-d);margin-bottom:16px;}
+.lv-file-type{display:inline-block;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:800;margin-bottom:14px;}
+.lv-type-ppt{background:#fdecea;color:var(--ppt);}
+.lv-type-pdf{background:#eafaf1;color:var(--green-d);}
+.lv-desc{font-size:13px;color:var(--text-l);line-height:1.8;margin-bottom:18px;}
+/* Ad in LV modal */
+.lv-ad{background:#fff8f0;border:2px dashed #ffe0b2;border-radius:10px;height:90px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:11px;color:#ccc;position:relative;}
+.lv-ad::before{content:'📢 إعلان Google AdSense — يظهر تلقائياً بعد تفعيل الحساب';}
+.lv-steps{background:#f0f6fb;border-radius:12px;padding:14px 18px;margin-bottom:18px;text-align:right;}
+.lv-steps h4{font-size:13px;color:var(--primary-d);margin-bottom:10px;font-weight:800;}
+.lv-step{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:12.5px;color:var(--text-l);}
+.lv-step-num{width:24px;height:24px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;}
+.lv-timer{font-size:36px;font-weight:900;color:var(--primary);margin:8px 0;}
+.lv-progress{width:100%;height:7px;background:#e0e0e0;border-radius:4px;overflow:hidden;margin-bottom:16px;}
+.lv-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary-l));width:0%;transition:width .1s linear;}
+.lv-btn{display:block;width:100%;padding:14px;background:linear-gradient(135deg,var(--green),var(--green-l));color:#fff;border:none;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:16px;font-weight:800;cursor:pointer;margin-bottom:8px;transition:all .2s;}
+.lv-btn:hover{background:var(--green-d);}
+.lv-btn-ppt{background:linear-gradient(135deg,var(--ppt),#e74c3c);}
+.lv-btn-ppt:hover{background:var(--red);}
+.lv-btn:disabled{background:#ccc;cursor:not-allowed;transform:none;}
+.lv-close{background:none;border:none;color:var(--text-l);font-size:13px;cursor:pointer;font-family:'Tajawal',sans-serif;text-decoration:underline;}
+.lv-note{font-size:11.5px;color:var(--text-l);margin-top:10px;line-height:1.6;}
+
+/* SIDEBAR WIDGETS */
+.widget{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sh);margin-bottom:18px;}
+.w-hdr{padding:11px 16px;font-size:13.5px;font-weight:800;color:#fff;}
+.w-hdr-primary{background:var(--primary);}
+.w-hdr-green{background:var(--green);}
+.w-hdr-red{background:var(--ppt);}
+.w-body{padding:14px 16px;}
+.w-stat{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.w-stat:last-child{border-bottom:none;}
+.w-stat-lbl{color:var(--text-l);}
+.w-stat-val{font-weight:800;color:var(--primary);}
+/* app buttons */
+.app-btn{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#f0f6fb;border-radius:12px;text-decoration:none;color:var(--text);margin-bottom:10px;transition:all .2s;border:1.5px solid var(--border);}
+.app-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+.app-btn:hover .app-sub{color:rgba(255,255,255,.75);}
+.app-ic{font-size:26px;flex-shrink:0;}
+.app-title{font-size:13px;font-weight:800;}
+.app-sub{font-size:11px;color:var(--text-l);margin-top:2px;}
+/* quick level */
+.lvl-list{display:flex;flex-direction:column;gap:8px;}
+.lvl-btn{padding:10px 14px;border-radius:10px;border:none;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:800;cursor:pointer;text-align:right;transition:all .2s;display:flex;align-items:center;justify-content:space-between;}
+.lvl-btn:hover{transform:translateX(-2px);}
+.lv1{background:#fdecea;color:#7b241c;}.lv2{background:#fef5e4;color:#784212;}.lv3{background:#fef9e7;color:#7d6608;}
+.lv4{background:#eafaf1;color:#145a32;}.lv5{background:#eaf4fb;color:#1a4971;}.lv6{background:#f4ecf7;color:#4a235a;}
+.lvl-count{background:rgba(0,0,0,.1);padding:2px 8px;border-radius:10px;font-size:11px;}
+
+/* FOOTER */
+footer{background:var(--primary-d);color:#fff;padding:36px 40px 18px;margin-top:10px;}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;max-width:1300px;margin:0 auto 28px;}
+.fb-t{font-family:'Amiri',serif;font-size:21px;color:var(--gold-l);display:block;margin-bottom:8px;}
+.fb-d{font-size:12.5px;opacity:.7;line-height:1.85;margin-bottom:12px;}
+.socs{display:flex;gap:8px;}
+.soc{width:33px;height:33px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;transition:background .2s;}
+.soc:hover{background:rgba(255,255,255,.2);}
+.fc h4{font-size:13px;font-weight:800;color:var(--gold-l);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.13);}
+.fc ul{list-style:none;}
+.fc ul li a{color:rgba(255,255,255,.7);text-decoration:none;font-size:12.5px;display:block;padding:4px 0;transition:color .2s;}
+.fc ul li a:hover{color:#fff;}
+.fbot{max-width:1300px;margin:0 auto;border-top:1px solid rgba(255,255,255,.12);padding-top:15px;display:flex;justify-content:space-between;font-size:12px;opacity:.6;flex-wrap:wrap;gap:7px;}
+.fab{position:fixed;bottom:22px;left:22px;width:50px;height:50px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 5px 18px rgba(26,82,118,.4);cursor:pointer;z-index:200;border:none;color:#fff;transition:transform .2s;}
+.fab:hover{transform:scale(1.1);}
+@media(max-width:1050px){.side-col{display:none;}.lessons-grid{grid-template-columns:1fr;}}
+@media(max-width:700px){.hdr-inner{padding:18px;}.hdr-title{font-size:26px;}.hdr-stats{flex-direction:row;}.topbar{display:none;} main{padding:22px 14px;}.nav-wrap{padding:0 10px;}.nav-search{display:none;}.fg{grid-template-columns:1fr;} footer{padding:26px 16px 14px;}}
+</style>
+</head>
+<body>
+
+<!-- SWITCHER -->
+<div class="switcher">
+  <span>🌐 تصفح مواقعنا:</span>
+  <a class="sw-btn sw-green" href="index.html">🏫 بوابة الموارد</a>
+  <a class="sw-btn sw-blue" href="blog.html">📰 المدونة</a>
+  <a class="sw-btn sw-red" href="lessons.html">📊 دروس PPT ◀ أنت هنا</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div>
+    <a href="https://telmidtice.men.gov.ma" target="_blank">📱 تطبيق TelmidTice</a>
+    <a href="https://portailriada.men.gov.ma" target="_blank">🌐 بوابة الريادة</a>
+    <a href="https://ppn.men.gov.ma" target="_blank">📥 PPN الرسمي</a>
+    <a href="https://massar.men.gov.ma" target="_blank">📊 مسار</a>
+  </div>
+  <div>🇲🇦 الموسم الدراسي 2025-2026</div>
+</div>
+
+<header>
+  <div class="hdr-inner">
+    <div class="hdr-logo">📊</div>
+    <div class="hdr-text">
+      <div class="hdr-eyebrow">📊 حصص التعليم الصريح — PPT و PDF</div>
+      <div class="hdr-title">دروس المدرسة الرائدة</div>
+      <div class="hdr-sub">تحميل حصص التعليم الصريح لجميع المستويات والمواد — الموسم 2025-2026<br>جميع المراحل والأسابيع • قابلة للتعديل • بصيغتي PPT و PDF</div>
+      <div class="hdr-badges">
+        <span class="hbadge">📊 صيغة PPTX قابلة للتعديل</span>
+        <span class="hbadge">📄 صيغة PDF للطباعة</span>
+        <span class="hbadge">🎯 التعليم الصريح TaRL</span>
+        <span class="hbadge">📅 2025-2026</span>
+      </div>
+    </div>
+    <div class="hdr-stats">
+      <div class="hstat"><b id="total-count">0</b><span>حصة دراسية</span></div>
+      <div class="hstat"><b>6</b><span>مستويات</span></div>
+      <div class="hstat"><b>3</b><span>مواد</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="announce">
+  🔴 جديد: <strong>دروس المرحلة الخامسة 2025-2026</strong> متاحة الآن للتحميل &nbsp;|&nbsp;
+  <a href="https://telmidtice.men.gov.ma" target="_blank">حمّل التطبيق الرسمي ←</a>
+</div>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-links">
+      <a href="index.html">🏠 الرئيسية</a>
+      <a href="lessons.html" class="act">📊 دروس PPT</a>
+      <a href="blog.html">📰 المدونة</a>
+      <a href="article3.html">🏫 المدرسة الرائدة</a>
+      <a href="article9.html">🗺️ خارطة الطريق</a>
+      <a href="article1.html">🎓 علوم التربية</a>
+    </div>
+    <div class="nav-search">
+      <input type="text" id="si" placeholder="ابحث عن حصة..." oninput="doSearch()">
+      <button onclick="doSearch()">🔍</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- TOP AD -->
+<div class="ad-space ad-banner">
+  <!-- AdSense: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXX" data-ad-slot="XXXX" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+  📢 مساحة إعلانية — Google AdSense (728×90)
+</div>
+
+<div class="page-layout">
+<div class="main-col">
+
+<!-- FILTER PANEL -->
+<div class="filter-panel">
+  <div class="filter-row">
+    <span class="filter-label">📚 المادة:</span>
+    <button class="ftag active" onclick="setFilter('mat','all',this)">الكل</button>
+    <button class="ftag" onclick="setFilter('mat','arabic',this)">📖 اللغة العربية</button>
+    <button class="ftag" onclick="setFilter('mat','french',this)">🇫🇷 اللغة الفرنسية</button>
+    <button class="ftag" onclick="setFilter('mat','math',this)">🔢 الرياضيات</button>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">🏫 المستوى:</span>
+    <button class="ftag active" onclick="setFilter('lv','all',this)">الكل</button>
+    <button class="ftag" onclick="setFilter('lv','1',this)">🌱 الأول</button>
+    <button class="ftag" onclick="setFilter('lv','2',this)">🌿 الثاني</button>
+    <button class="ftag" onclick="setFilter('lv','3',this)">🌳 الثالث</button>
+    <button class="ftag" onclick="setFilter('lv','4',this)">🎓 الرابع</button>
+    <button class="ftag" onclick="setFilter('lv','5',this)">🚀 الخامس</button>
+    <button class="ftag" onclick="setFilter('lv','6',this)">🏆 السادس</button>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">📅 المرحلة:</span>
+    <button class="ftag active" onclick="setFilter('mrhla','all',this)">الكل</button>
+    <button class="ftag" onclick="setFilter('mrhla','1',this)">🟥 المرحلة 1</button>
+    <button class="ftag" onclick="setFilter('mrhla','2',this)">🟧 المرحلة 2</button>
+    <button class="ftag" onclick="setFilter('mrhla','3',this)">🟨 المرحلة 3</button>
+    <button class="ftag" onclick="setFilter('mrhla','4',this)">🟩 المرحلة 4</button>
+    <button class="ftag" onclick="setFilter('mrhla','5',this)">🟦 المرحلة 5</button>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">📄 الصيغة:</span>
+    <button class="ftag active" onclick="setFilter('fmt','all',this)">الكل</button>
+    <button class="ftag" onclick="setFilter('fmt','ppt',this)">📊 PPT فقط</button>
+    <button class="ftag" onclick="setFilter('fmt','pdf',this)">📄 PDF فقط</button>
+    <button class="ftag" onclick="setFilter('fmt','both',this)">📊+📄 الاثنان</button>
+  </div>
+</div>
+
+<div class="results-info">
+  <span class="results-count" id="rc">جاري التحميل...</span>
+  <div class="view-toggle">
+    <button class="vtbtn active" onclick="setView('grid',this)" title="عرض شبكي">⊞</button>
+    <button class="vtbtn" onclick="setView('list',this)" title="عرض قائمة">☰</button>
+  </div>
+</div>
+
+<div class="lessons-grid" id="grid"></div>
+<div class="pag" id="pag"></div>
+
+<!-- MID AD -->
+<div class="ad-space ad-mid">
+  <!-- AdSense mid -->
+  📢 مساحة إعلانية — Google AdSense (وسط الصفحة)
+</div>
+
+<!-- INFO BOX -->
+<div style="background:var(--white);border-radius:var(--radius);padding:24px 28px;box-shadow:var(--sh);margin-bottom:24px;border-right:5px solid var(--primary);">
+  <h3 style="font-family:'Amiri',serif;font-size:22px;color:var(--primary-d);margin-bottom:12px;">💡 كيف تُحمّل الدروس الرسمية مباشرة؟</h3>
+  <p style="font-size:14px;line-height:2;color:var(--text-l);margin-bottom:14px;">الدروس الرسمية للمدرسة الرائدة بصيغة PPTX متاحة مباشرة للأساتذة عبر قناتين رسميتين:</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <a href="https://telmidtice.men.gov.ma" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px;background:#f0f6fb;border-radius:12px;text-decoration:none;color:var(--text);border:1.5px solid var(--border);transition:all .2s;" onmouseover="this.style.background='#1a5276';this.style.color='#fff'" onmouseout="this.style.background='#f0f6fb';this.style.color='var(--text)'">
+      <span style="font-size:32px;">📱</span>
+      <div><div style="font-size:14px;font-weight:800;">تطبيق TelmidTice</div><div style="font-size:12px;color:inherit;opacity:.7;margin-top:2px;">الطريقة الرسمية والأسهل</div></div>
+    </a>
+    <a href="https://portailriada.men.gov.ma" target="_blank" style="display:flex;align-items:center;gap:12px;padding:14px;background:#eafaf1;border-radius:12px;text-decoration:none;color:var(--text);border:1.5px solid #d0e8dd;transition:all .2s;" onmouseover="this.style.background='#1e8449';this.style.color='#fff'" onmouseout="this.style.background='#eafaf1';this.style.color='var(--text)'">
+      <span style="font-size:32px;">🌐</span>
+      <div><div style="font-size:14px;font-weight:800;">بوابة الريادة الرسمية</div><div style="font-size:12px;opacity:.7;margin-top:2px;">بحساب مسار الأستاذ</div></div>
+    </a>
+  </div>
+</div>
+
+</div><!-- end main-col -->
+
+<!-- SIDEBAR -->
+<div class="side-col">
+
+  <!-- AD SIDE -->
+  <div class="ad-space ad-side" style="margin-bottom:18px;">
+    📢 إعلان جانبي (300×250) — AdSense
+  </div>
+
+  <!-- QUICK LEVELS -->
+  <div class="widget">
+    <div class="w-hdr w-hdr-primary">🏫 اختر المستوى</div>
+    <div class="w-body">
+      <div class="lvl-list">
+        <button class="lvl-btn lv1" onclick="setFilterDirect('lv','1')">🌱 المستوى الأول <span class="lvl-count" id="cnt-1">0</span></button>
+        <button class="lvl-btn lv2" onclick="setFilterDirect('lv','2')">🌿 المستوى الثاني <span class="lvl-count" id="cnt-2">0</span></button>
+        <button class="lvl-btn lv3" onclick="setFilterDirect('lv','3')">🌳 المستوى الثالث <span class="lvl-count" id="cnt-3">0</span></button>
+        <button class="lvl-btn lv4" onclick="setFilterDirect('lv','4')">🎓 المستوى الرابع <span class="lvl-count" id="cnt-4">0</span></button>
+        <button class="lvl-btn lv5" onclick="setFilterDirect('lv','5')">🚀 المستوى الخامس <span class="lvl-count" id="cnt-5">0</span></button>
+        <button class="lvl-btn lv6" onclick="setFilterDirect('lv','6')">🏆 المستوى السادس <span class="lvl-count" id="cnt-6">0</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="widget">
+    <div class="w-hdr w-hdr-red">📊 إحصائيات الدروس</div>
+    <div class="w-body">
+      <div class="w-stat"><span class="w-stat-lbl">📖 العربية</span><span class="w-stat-val" id="cnt-ar">0 حصة</span></div>
+      <div class="w-stat"><span class="w-stat-lbl">🇫🇷 الفرنسية</span><span class="w-stat-val" id="cnt-fr">0 حصة</span></div>
+      <div class="w-stat"><span class="w-stat-lbl">🔢 الرياضيات</span><span class="w-stat-val" id="cnt-ma">0 حصة</span></div>
+      <div class="w-stat"><span class="w-stat-lbl">📊 PPT متاح</span><span class="w-stat-val" id="cnt-ppt">0</span></div>
+      <div class="w-stat"><span class="w-stat-lbl">📄 PDF متاح</span><span class="w-stat-val" id="cnt-pdf">0</span></div>
+    </div>
+  </div>
+
+  <!-- APP LINKS -->
+  <div class="widget">
+    <div class="w-hdr w-hdr-green">📱 التطبيقات الرسمية</div>
+    <div class="w-body">
+      <a class="app-btn" href="https://telmidtice.men.gov.ma" target="_blank">
+        <span class="app-ic">📱</span>
+        <div><div class="app-title">TelmidTice</div><div class="app-sub">تحميل الدروس الرسمية مجاناً</div></div>
+      </a>
+      <a class="app-btn" href="https://portailriada.men.gov.ma" target="_blank">
+        <span class="app-ic">🌐</span>
+        <div><div class="app-title">بوابة الريادة</div><div class="app-sub">الموارد الرسمية بحساب مسار</div></div>
+      </a>
+      <a class="app-btn" href="https://ppn.men.gov.ma" target="_blank">
+        <span class="app-ic">📥</span>
+        <div><div class="app-title">PPN — الدروس الرسمية</div><div class="app-sub">منصة وزارة التربية</div></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- AD SIDE 2 -->
+  <div class="ad-space" style="min-height:150px;width:100%;">
+    📢 إعلان جانبي ثانٍ (300×150)
+  </div>
+
+</div><!-- end side-col -->
+</div><!-- end layout -->
+</main>
+
+<footer>
+  <div class="fg">
+    <div>
+      <span class="fb-t">📊 دروس المدرسة الرائدة</span>
+      <p class="fb-d">تحميل حصص التعليم الصريح لجميع المستويات بصيغتي PPT وPDF — الموسم 2025-2026</p>
+      <div class="socs"><div class="soc">📘</div><div class="soc">📸</div><div class="soc">▶️</div><div class="soc">💬</div></div>
+    </div>
+    <div class="fc"><h4>المستويات</h4><ul>
+      <li><a href="#" onclick="setFilterDirect('lv','1')">🌱 المستوى الأول</a></li>
+      <li><a href="#" onclick="setFilterDirect('lv','2')">🌿 المستوى الثاني</a></li>
+      <li><a href="#" onclick="setFilterDirect('lv','3')">🌳 المستوى الثالث</a></li>
+      <li><a href="#" onclick="setFilterDirect('lv','4')">🎓 المستوى الرابع</a></li>
+      <li><a href="#" onclick="setFilterDirect('lv','5')">🚀 المستوى الخامس</a></li>
+      <li><a href="#" onclick="setFilterDirect('lv','6')">🏆 المستوى السادس</a></li>
+    </ul></div>
+    <div class="fc"><h4>المواد</h4><ul>
+      <li><a href="#" onclick="setFilterDirect('mat','arabic')">📖 اللغة العربية</a></li>
+      <li><a href="#" onclick="setFilterDirect('mat','french')">🇫🇷 اللغة الفرنسية</a></li>
+      <li><a href="#" onclick="setFilterDirect('mat','math')">🔢 الرياضيات</a></li>
+    </ul></div>
+    <div class="fc"><h4>مواقعنا</h4><ul>
+      <li><a href="index.html">🏫 بوابة الموارد</a></li>
+      <li><a href="blog.html">📰 المدونة التربوية</a></li>
+      <li><a href="https://telmidtice.men.gov.ma" target="_blank">📱 TelmidTice</a></li>
+      <li><a href="https://portailriada.men.gov.ma" target="_blank">🌐 بوابة الريادة</a></li>
+      <li><a href="https://ppn.men.gov.ma" target="_blank">📥 PPN الرسمي</a></li>
+    </ul></div>
+  </div>
+  <div class="fbot">
+    <span>© 2025-2026 دروس المدرسة الرائدة</span>
+    <span>🇲🇦 بـ ❤️ لأساتذة المغرب</span>
+  </div>
+</footer>
+
+<button class="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+
+<!-- LINKVERTISE MODAL -->
+<div class="lv-overlay" id="lv-overlay">
+  <div class="lv-box">
+    <span class="lv-ic" id="lv-ic">📊</span>
+    <div class="lv-file-name" id="lv-name">اسم الملف</div>
+    <span class="lv-file-type" id="lv-type"></span>
+    <div class="lv-desc">لدعم استمرارية هذه المنصة التعليمية المجانية، يرجى إتمام خطوة واحدة بسيطة قبل التحميل.</div>
+    <!-- AdSense في المودال -->
+    <div class="lv-ad"></div>
+    <div class="lv-steps">
+      <h4>📋 خطوات التحميل:</h4>
+      <div class="lv-step"><div class="lv-step-num">1</div><span>انتظر انتهاء العداد (5 ثوانٍ)</span></div>
+      <div class="lv-step"><div class="lv-step-num">2</div><span>اضغط زر التحميل</span></div>
+      <div class="lv-step"><div class="lv-step-num">3</div><span>شاهد إعلاناً قصيراً عبر Linkvertise</span></div>
+      <div class="lv-step"><div class="lv-step-num">4</div><span>حمّل ملفك مجاناً بدون تسجيل!</span></div>
+    </div>
+    <div class="lv-timer" id="lv-timer">5</div>
+    <div class="lv-progress"><div class="lv-bar" id="lv-bar"></div></div>
+    <button class="lv-btn" id="lv-btn" disabled onclick="goLV()">⏳ انتظر...</button>
+    <button class="lv-close" onclick="closeLV()">إغلاق</button>
+    <div class="lv-note">💡 التحميل عبر Linkvertise يدعم استمرارية هذه المنصة المجانية ❤️</div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// ⚠️ إعدادات — عدّل هذه القيم بمعلوماتك
+// ============================================================
+const CONFIG = {
+  LV_ID: 'YOUR_LINKVERTISE_ID', // معرفك من linkvertise.com
+  // مثال رابط Linkvertise:
+  // https://linkvertise.com/YOUR_LV_ID/nom-du-fichier?o=sharing
+};
+
+// ============================================================
+// قاعدة البيانات الكاملة للدروس
+// المصدر: تطبيق TelmidTice + مواقع تربوية مغربية موثوقة
+// ============================================================
+const LESSONS = [
+
+// ===== المستوى الأول =====
+// العربية
+{id:1,mat:'arabic',lv:'1',mrhla:'1',week:'الأسبوع 1',fmt:'both',
+ title:'حصة القراءة: الأسرة — المستوى الأول',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م1','PPT+PDF'],
+ desc:'حصة قراءة وفق التعليم الصريح: تقديم نص الأسرة مع أنشطة الفهم والتواصل الشفهي.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s1-w1-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s1-w1-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:2,mat:'arabic',lv:'1',mrhla:'1',week:'الأسبوع 2',fmt:'both',
+ title:'حصة الكتابة: رسم الحروف — المستوى الأول',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م1','PPT+PDF'],
+ desc:'حصة كتابة: رسم الحروف الهجائية وتمييز أشكالها وفق خطوات التعليم الصريح.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s1-w2-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s1-w2-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:3,mat:'arabic',lv:'1',mrhla:'2',week:'الأسبوع 5',fmt:'both',
+ title:'حصة الظاهرة اللغوية: الجملة البسيطة — المستوى الأول',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م1','PPT+PDF'],
+ desc:'حصة قواعد: التعرف على الجملة البسيطة وتمييزها مع أنشطة التطبيق.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s1-w5-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s1-w5-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// الفرنسية
+{id:4,mat:'french',lv:'1',mrhla:'1',week:'Semaine 1',fmt:'both',
+ title:"Lecture: Ma famille — Niveau 1",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N1','PPT+PDF'],
+ desc:"حصة قراءة بالفرنسية: نص الأسرة مع أنشطة الفهم والتواصل وفق التعليم الصريح.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s1-w1-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s1-w1-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:5,mat:'french',lv:'1',mrhla:'2',week:'Semaine 5',fmt:'both',
+ title:"Écriture: Les lettres — Niveau 1",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N1','PPT+PDF'],
+ desc:"حصة كتابة: رسم الحروف الفرنسية وصوتها وفق خطوات التعليم الصريح.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s1-w5-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s1-w5-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// الرياضيات
+{id:6,mat:'math',lv:'1',mrhla:'1',week:'الأسبوع 1',fmt:'both',
+ title:'حصة الأعداد من 0 إلى 5 — المستوى الأول',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م1','PPT+PDF'],
+ desc:'حصة رياضيات: التعرف على الأعداد من 0 إلى 5 وقراءتها وكتابتها وفق التعليم الصريح.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s1-w1-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s1-w1-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:7,mat:'math',lv:'1',mrhla:'2',week:'الأسبوع 5',fmt:'both',
+ title:'حصة الجمع في حدود 10 — المستوى الأول',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م1','PPT+PDF'],
+ desc:'حصة جمع: اكتشاف عملية الجمع وتطبيقها في حدود العشرة مع أنشطة تطبيقية.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s1-w5-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s1-w5-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// ===== المستوى الثاني =====
+{id:8,mat:'arabic',lv:'2',mrhla:'1',week:'الأسبوع 1',fmt:'both',
+ title:'حصة القراءة: المدرسة — المستوى الثاني',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م2','PPT+PDF'],
+ desc:'حصة قراءة: نص المدرسة مع أنشطة الفهم والتعبير الكتابي وفق التعليم الصريح.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s2-w1-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s2-w1-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:9,mat:'french',lv:'2',mrhla:'1',week:'Semaine 1',fmt:'both',
+ title:"Lecture: L'école — Niveau 2",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N2','PPT+PDF'],
+ desc:"حصة قراءة: نص المدرسة مع أنشطة الفهم والإثراء المعجمي.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s2-w1-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s2-w1-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:10,mat:'math',lv:'2',mrhla:'1',week:'الأسبوع 2',fmt:'both',
+ title:'حصة الجمع والطرح في حدود 100 — المستوى الثاني',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م2','PPT+PDF'],
+ desc:'حصة رياضيات: الجمع والطرح بالاحتياط والاستلاف في حدود مئة.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s2-w2-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s2-w2-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// ===== المستوى الثالث =====
+{id:11,mat:'arabic',lv:'3',mrhla:'2',week:'الأسبوع 3',fmt:'both',
+ title:'حصة النحو: الجملة الاسمية — المستوى الثالث',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م3','PPT+PDF'],
+ desc:'حصة نحو: المبتدأ والخبر في الجملة الاسمية مع أنشطة الاستخراج والتطبيق.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s3-w3-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s3-w3-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:12,mat:'french',lv:'3',mrhla:'2',week:'Semaine 3',fmt:'both',
+ title:"Grammaire: Le présent — Niveau 3",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N3','PPT+PDF'],
+ desc:"حصة قواعد: تصريف أفعال المجموعة الأولى في الحاضر مع تمارين تطبيقية.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s3-w3-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s3-w3-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:13,mat:'math',lv:'3',mrhla:'2',week:'الأسبوع 4',fmt:'both',
+ title:'حصة جدول الضرب 6 و7 — المستوى الثالث',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م3','PPT+PDF'],
+ desc:'حصة ضرب: تعلم وحفظ جداول الضرب 6 و7 مع تقنيات التذكر والتطبيق.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s3-w4-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s3-w4-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// ===== المستوى الرابع =====
+{id:14,mat:'arabic',lv:'4',mrhla:'2',week:'الأسبوع 4',fmt:'both',
+ title:'حصة الإعراب: المبتدأ والخبر — المستوى الرابع',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م4','PPT+PDF'],
+ desc:'حصة إعراب: تطبيق إعراب المبتدأ والخبر مع نماذج تفصيلية وفق التعليم الصريح.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s4-w4-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s4-w4-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:15,mat:'french',lv:'4',mrhla:'3',week:'Semaine 6',fmt:'both',
+ title:"Production écrite: La lettre — Niveau 4",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N4','PPT+PDF'],
+ desc:"حصة تعبير كتابي: كتابة رسالة شخصية بالفرنسية مع الهيكل والمكونات.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s4-w6-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s4-w6-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:16,mat:'math',lv:'4',mrhla:'3',week:'الأسبوع 6',fmt:'both',
+ title:'حصة الكسور العشرية — المستوى الرابع',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م4','PPT+PDF'],
+ desc:'حصة أعداد: مفهوم الكسر العشري وقراءته وكتابته والعمليات عليه.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s4-w6-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s4-w6-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// ===== المستوى الخامس =====
+{id:17,mat:'arabic',lv:'5',mrhla:'3',week:'الأسبوع 7',fmt:'both',
+ title:'حصة التعبير الكتابي: كتابة فقرة — المستوى الخامس',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م5','PPT+PDF'],
+ desc:'حصة تعبير: بناء فقرة منسجمة ذات جملة رئيسية وداعمة وختامية.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s5-w7-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s5-w7-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:18,mat:'french',lv:'5',mrhla:'3',week:'Semaine 7',fmt:'both',
+ title:"Conjugaison: Le passé composé — Niveau 5",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N5','PPT+PDF'],
+ desc:"حصة تصريف: الماضي المركب بالفرنسية مع أفعال المجموعتين الأولى والثانية.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s5-w7-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s5-w7-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:19,mat:'math',lv:'5',mrhla:'3',week:'الأسبوع 8',fmt:'both',
+ title:'حصة النسبة المئوية — المستوى الخامس',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م5','PPT+PDF'],
+ desc:'حصة رياضيات: مفهوم النسبة المئوية وحسابها وتطبيقاتها الحياتية.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s5-w8-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s5-w8-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:20,mat:'arabic',lv:'5',mrhla:'4',week:'الأسبوع 9',fmt:'both',
+ title:'حصة النص الأدبي: الشعر — المستوى الخامس',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م5','PPT+PDF'],
+ desc:'حصة أدب: قراءة وتحليل نص شعري مع استخراج الصور الأدبية والموسيقى الشعرية.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s5-w9-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s5-w9-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+// ===== المستوى السادس =====
+{id:21,mat:'arabic',lv:'6',mrhla:'4',week:'الأسبوع 9',fmt:'both',
+ title:'حصة الإعراب: الفاعل والمفعول — المستوى السادس',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م6','PPT+PDF'],
+ desc:'حصة إعراب: الجملة الفعلية وعناصرها مع نماذج إعرابية كاملة.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s6-w9-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s6-w9-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:22,mat:'french',lv:'6',mrhla:'4',week:'Semaine 9',fmt:'both',
+ title:"Lecture: Texte argumentatif — Niveau 6",
+ icon:'🇫🇷',icC:'li-fr',tags:['ltag-fr','ltag-lv','ltag-ppt'],tagLbls:['Français','N6','PPT+PDF'],
+ desc:"حصة قراءة: النص الحجاجي بالفرنسية وأساليب التعبير عن الرأي والبرهنة.",
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/french-s6-w9-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/french-s6-w9-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:23,mat:'math',lv:'6',mrhla:'4',week:'الأسبوع 10',fmt:'both',
+ title:'حصة مساحة الأشكال الهندسية — المستوى السادس',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م6','PPT+PDF'],
+ desc:'حصة هندسة: قوانين مساحة المستطيل والمثلث والدائرة مع تطبيقات.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s6-w10-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s6-w10-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:24,mat:'math',lv:'6',mrhla:'5',week:'الأسبوع 11',fmt:'both',
+ title:'حصة الإحصاء والرسوم البيانية — المستوى السادس',
+ icon:'🔢',icC:'li-ma',tags:['ltag-ma','ltag-lv','ltag-ppt'],tagLbls:['رياضيات','م6','PPT+PDF'],
+ desc:'حصة إحصاء: قراءة الجداول والرسوم البيانية وحساب المعدل الحسابي.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/math-s6-w11-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/math-s6-w11-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+
+{id:25,mat:'arabic',lv:'6',mrhla:'5',week:'الأسبوع 12',fmt:'both',
+ title:'حصة التعبير الكتابي: الرسالة الرسمية — المستوى السادس',
+ icon:'📖',icC:'li-ar',tags:['ltag-ar','ltag-lv','ltag-ppt'],tagLbls:['عربية','م6','PPT+PDF'],
+ desc:'حصة تعبير: كتابة الرسالة الرسمية مع الهيكل والأسلوب المناسب.',
+ source:'telmidtice',
+ pptUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s6-w12-ppt?o=sharing',
+ pdfUrl:'https://linkvertise.com/YOUR_LV_ID/arabic-s6-w12-pdf?o=sharing',
+ officialUrl:'https://telmidtice.men.gov.ma'},
+];
+
+// ============================================================
+// STATE & FILTERS
+// ============================================================
+let filters = {mat:'all', lv:'all', mrhla:'all', fmt:'all'};
+let search = '';
+let page = 1;
+let viewMode = 'grid';
+let currentDL = null;
+let lvTimer = null;
+const PER_PAGE = 8;
+
+function getFiltered() {
+  return LESSONS.filter(l => {
+    const fm = filters.mat === 'all' || l.mat === filters.mat;
+    const fl = filters.lv === 'all' || l.lv === filters.lv;
+    const fr = filters.mrhla === 'all' || l.mrhla === filters.mrhla;
+    const ff = filters.fmt === 'all' || l.fmt === filters.fmt || (filters.fmt === 'both' && l.fmt === 'both');
+    const fs = !search || (l.title + l.desc + l.week).includes(search);
+    return fm && fl && fr && ff && fs;
+  });
+}
+
+function setFilter(type, val, btn) {
+  filters[type] = val;
+  page = 1;
+  // Update button states
+  const row = btn.parentElement;
+  row.querySelectorAll('.ftag').forEach(b => {
+    b.className = 'ftag';
+  });
+  btn.classList.add('active');
+  render();
+}
+
+function setFilterDirect(type, val) {
+  filters[type] = val;
+  page = 1;
+  // Update filter buttons
+  document.querySelectorAll('.filter-row').forEach(row => {
+    row.querySelectorAll('.ftag').forEach(btn => {
+      const onclick = btn.getAttribute('onclick') || '';
+      if (onclick.includes(`'${type}'`) && onclick.includes(`'${val}'`)) {
+        btn.classList.add('active');
+      } else if (onclick.includes(`'${type}'`)) {
+        btn.className = 'ftag';
+      }
+    });
+  });
+  render();
+  document.getElementById('grid').scrollIntoView({behavior:'smooth'});
+}
+
+function setView(mode, btn) {
+  viewMode = mode;
+  document.querySelectorAll('.vtbtn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const grid = document.getElementById('grid');
+  if (mode === 'list') grid.classList.add('list-view');
+  else grid.classList.remove('list-view');
+}
+
+function doSearch() {
+  search = document.getElementById('si').value.trim();
+  page = 1;
+  render();
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function render() {
+  const f = getFiltered();
+  const total = f.length;
+  const pages = Math.ceil(total / PER_PAGE);
+  const items = f.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  document.getElementById('rc').textContent = `عرض ${total} حصة دراسية`;
+
+  const grid = document.getElementById('grid');
+  if (!items.length) {
+    grid.innerHTML = `<div class="empty-state"><span class="empty-ic">🔍</span><p>لا توجد حصص تطابق اختيارك — جرب فلاتر أخرى</p></div>`;
+    document.getElementById('pag').innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = items.map(l => `
+    <div class="lcard">
+      <span class="lcard-badge ${l.fmt==='both'?'badge-both':l.fmt==='ppt'?'badge-ppt':'badge-pdf'}">${l.fmt==='both'?'📊+📄 PPT+PDF':l.fmt==='ppt'?'📊 PPT':'📄 PDF'}</span>
+      <div class="lcard-header">
+        <div class="lcard-icon ${l.icC}">${l.icon}</div>
+        <div class="lcard-info">
+          <div class="lcard-title">${l.title}</div>
+          <div class="lcard-tags">${l.tags.map((t,i)=>`<span class="ltag ${t}">${l.tagLbls[i]}</span>`).join('')}<span class="ltag ltag-week">${l.week}</span></div>
+          <div class="lcard-desc">${l.desc}</div>
+        </div>
+      </div>
+      <div class="lcard-footer">
+        <div class="lcard-meta">
+          <span>📱 TelmidTice</span>
+          <span>•</span>
+          <span>المرحلة ${l.mrhla}</span>
+        </div>
+        <div class="lcard-btns">
+          ${l.fmt !== 'pdf' ? `<button class="lbtn lbtn-ppt" onclick="startDL(${l.id},'ppt')">📊 تحميل PPT</button>` : ''}
+          ${l.fmt !== 'ppt' ? `<button class="lbtn lbtn-pdf" onclick="startDL(${l.id},'pdf')">📄 تحميل PDF</button>` : ''}
+          <button class="lbtn lbtn-info" onclick="window.open('${l.officialUrl}','_blank')">🌐 رسمي</button>
+        </div>
+      </div>
+    </div>`).join('');
+
+  // Pagination
+  const pag = document.getElementById('pag');
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+  let h = '';
+  if (page > 1) h += `<button class="pbtn" onclick="goP(${page-1})">→</button>`;
+  for (let i = 1; i <= pages; i++) h += `<button class="pbtn${i===page?' active':''}" onclick="goP(${i})">${i}</button>`;
+  if (page < pages) h += `<button class="pbtn" onclick="goP(${page+1})">←</button>`;
+  pag.innerHTML = h;
+}
+
+function goP(n) {
+  page = n;
+  render();
+  document.getElementById('grid').scrollIntoView({behavior:'smooth'});
+}
+
+// ============================================================
+// LINKVERTISE DOWNLOAD SYSTEM
+// ============================================================
+function startDL(id, type) {
+  const l = LESSONS.find(x => x.id === id);
+  if (!l) return;
+  currentDL = {lesson: l, type: type};
+
+  document.getElementById('lv-ic').textContent = type === 'ppt' ? '📊' : '📄';
+  document.getElementById('lv-name').textContent = l.title;
+  const typeEl = document.getElementById('lv-type');
+  typeEl.textContent = type === 'ppt' ? '📊 صيغة PowerPoint (PPTX) — قابلة للتعديل' : '📄 صيغة PDF — جاهزة للطباعة';
+  typeEl.className = `lv-file-type lv-type-${type}`;
+
+  const btn = document.getElementById('lv-btn');
+  btn.disabled = true;
+  btn.textContent = '⏳ انتظر...';
+  btn.className = `lv-btn lv-btn-${type}`;
+  document.getElementById('lv-timer').textContent = '5';
+  document.getElementById('lv-bar').style.width = '0%';
+  document.getElementById('lv-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  let secs = 5;
+  if (lvTimer) clearInterval(lvTimer);
+  lvTimer = setInterval(() => {
+    secs--;
+    document.getElementById('lv-timer').textContent = secs;
+    document.getElementById('lv-bar').style.width = ((5 - secs) / 5 * 100) + '%';
+    if (secs <= 0) {
+      clearInterval(lvTimer);
+      btn.disabled = false;
+      btn.textContent = type === 'ppt' ? '📊 تحميل ملف PPT الآن!' : '📄 تحميل ملف PDF الآن!';
+    }
+  }, 1000);
+}
+
+function goLV() {
+  if (!currentDL) return;
+  const url = currentDL.type === 'ppt' ? currentDL.lesson.pptUrl : currentDL.lesson.pdfUrl;
+  // ⚠️ استبدل YOUR_LINKVERTISE_ID بمعرفك الحقيقي
+  // الرابط النهائي: https://linkvertise.com/YOUR_LV_ID/filename?o=sharing
+  window.open(url.replace('YOUR_LV_ID', CONFIG.LV_ID), '_blank');
+  closeLV();
+}
+
+function closeLV() {
+  document.getElementById('lv-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+  if (lvTimer) clearInterval(lvTimer);
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLV(); });
+
+// ============================================================
+// INIT — إحصائيات
+// ============================================================
+function initStats() {
+  document.getElementById('total-count').textContent = LESSONS.length;
+  document.getElementById('cnt-ar').textContent = LESSONS.filter(l => l.mat === 'arabic').length + ' حصة';
+  document.getElementById('cnt-fr').textContent = LESSONS.filter(l => l.mat === 'french').length + ' حصة';
+  document.getElementById('cnt-ma').textContent = LESSONS.filter(l => l.mat === 'math').length + ' حصة';
+  document.getElementById('cnt-ppt').textContent = LESSONS.filter(l => l.fmt !== 'pdf').length + ' ملف';
+  document.getElementById('cnt-pdf').textContent = LESSONS.filter(l => l.fmt !== 'ppt').length + ' ملف';
+  for (let i = 1; i <= 6; i++) {
+    document.getElementById(`cnt-${i}`).textContent = LESSONS.filter(l => l.lv === String(i)).length;
+  }
+}
+
+initStats();
+render();
+</script>
+</body>
+</html>
